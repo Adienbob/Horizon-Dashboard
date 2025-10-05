@@ -1,6 +1,6 @@
 "use client"
 
-import Table from "@/components/global/checkTable";
+import CheckTable from "@/components/global/checkTable";
 import ComplexTable from "@/components/global/complexTable";
 import Tasks from "@/components/home/tasks";
 import Lessons from "@/components/home/lessons";
@@ -21,7 +21,7 @@ export default function Home() {
          <DashboardOverview />
          <TotalSpent />
          <StackedChart />
-         <Table 
+         <CheckTable 
             names={["NAME", "PROGRESS", "QUANTITY", "DATE", ]} 
             columnsData={
                [

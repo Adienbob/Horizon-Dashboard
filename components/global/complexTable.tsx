@@ -1,18 +1,7 @@
 import Image from "next/image"
-import {
-   Chart as ChartJS,
-   CategoryScale,
-   LinearScale,
-   BarElement,
-   Title,
-   Tooltip,
-   Legend,
-   ChartOptions,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
 import IconButton from "../Buttons/iconButton";
+import HoriChart from "./horizontalChart";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 
 type Data = {
@@ -20,19 +9,6 @@ type Data = {
    columnsData?: (string)[][];
 }
 export default function ComplexTable({names, columnsData}: Data) {
-
-   const barOptions: ChartOptions<"bar"> = {
-      indexAxis: "y", 
-      responsive: true,
-      plugins: {
-         legend: { display: false },
-         title: { display: false },
-      },
-      scales: {
-         x: { display: false }, 
-         y: { display: false }, 
-      },
-   };
 
    return (
       <section>
@@ -73,20 +49,7 @@ export default function ComplexTable({names, columnsData}: Data) {
                                  )
                               ) : colIndex === 3 ? (
                                  <div className="barChart">
-                                    <Bar
-                                    data={{
-                                       labels: [""],
-                                       datasets: [
-                                          {
-                                          label: "Revenue",
-                                          data: [Number(cell)], 
-                                          backgroundColor: "#4318FF",
-                                          borderRadius: 10,
-                                          },
-                                       ],
-                                    }}
-                                    options={barOptions}
-                                    />
+                                    <HoriChart label="revenue" data={Number(cell)} />
                                  </div>
                               ) : cell}
                            </td>

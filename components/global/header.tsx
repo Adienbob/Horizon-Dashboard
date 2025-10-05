@@ -9,7 +9,7 @@ export default function Header() {
             <div>
                <button>pages</button>
                <p>/</p>
-               <button>NFT Marketplace</button>
+               <button>Dashboard Main</button>
             </div>
             <Link href="/">
                <p>the name of the current page</p>

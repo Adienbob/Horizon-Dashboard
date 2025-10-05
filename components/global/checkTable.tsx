@@ -6,7 +6,7 @@ type Data = {
    input?: boolean;
    className?: string[];
 }
-export default function Table({names, columnsData, input, className}: Data) {
+export default function CheckTable({names, columnsData, input, className}: Data) {
 
    return (
       <section className="checkTable">

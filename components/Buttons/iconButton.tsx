@@ -5,12 +5,13 @@ type IconDetails = {
    width: number;
    height: number;
    alt: string;
+   className?: string;
 }
 
-export default function IconButton({src, width, height, alt}: IconDetails) {
+export default function IconButton({src, width, height, alt, className}: IconDetails) {
 
    return (
-      <button>
+      <button className={className}>
          <Image 
             src={src}
             alt={alt}
