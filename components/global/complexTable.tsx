@@ -1,5 +1,5 @@
 import Image from "next/image"
-import IconButton from "../Buttons/iconButton";
+import IconButton from "../buttons/iconButton";
 import HoriChart from "./horizontalChart";
 
 

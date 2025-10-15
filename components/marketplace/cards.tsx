@@ -1,5 +1,5 @@
 import Image from "next/image"
-import PrimaryButton from "../Buttons/primaryButtons";
+import PrimaryButton from "../buttons/primaryButtons";
 
 type ImageTypes = {
    src: string;

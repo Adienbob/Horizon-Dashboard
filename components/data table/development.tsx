@@ -1,4 +1,4 @@
-import IconButton from "../Buttons/iconButton";
+import IconButton from "../buttons/iconButton";
 import Image from "next/image"
 import HoriChart from "../global/horizontalChart";
 

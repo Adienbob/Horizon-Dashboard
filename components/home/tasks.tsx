@@ -1,6 +1,6 @@
 import Image from "next/image"
 import React from "react";
-import IconButton from "../Buttons/iconButton";
+import IconButton from "../buttons/iconButton";
 
 
 type Taskstypes = {

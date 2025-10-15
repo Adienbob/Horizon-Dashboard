@@ -2,7 +2,7 @@
 import Image from "next/image"
 import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
-import IconButton from "../Buttons/iconButton";
+import IconButton from "../buttons/iconButton";
 
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });

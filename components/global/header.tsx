@@ -1,5 +1,5 @@
 import Link from "next/link"
-import IconButton from "../Buttons/iconButton";
+import IconButton from "../buttons/iconButton";
 
 export default function Header() {
 

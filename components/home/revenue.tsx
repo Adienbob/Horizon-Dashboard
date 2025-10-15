@@ -9,7 +9,7 @@ Legend,
 ChartOptions,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import IconButton from "../Buttons/iconButton";
+import IconButton from "../buttons/iconButton";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 

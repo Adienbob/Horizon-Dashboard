@@ -1,4 +1,4 @@
-import IconButton from "../Buttons/iconButton";
+import IconButton from "../buttons/iconButton";
 
 type Data = {
    names: string[];
