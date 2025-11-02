@@ -9,7 +9,6 @@ export default function Background() {
             alt=""
             width={965}
             height={1152}
-            quality={80}
          />
          <div className="horizon-details">
             <img src="../assets/signIn/icons/Horizon Logo.svg" alt="" />

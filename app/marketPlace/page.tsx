@@ -1,3 +1,5 @@
+"use client"
+
 import Creators from "@/components/marketplace/creators";
 import Discover from "@/components/marketplace/discover";
 import History from "@/components/marketplace/history";

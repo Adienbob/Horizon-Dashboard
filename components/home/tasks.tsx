@@ -1,6 +1,6 @@
 import Image from "next/image"
 import React from "react";
-import IconButton from "../buttons/iconButton";
+import MoreButton from "../buttons/moreHoriz";
 
 
 type Taskstypes = {
@@ -22,7 +22,7 @@ export default function Tasks({tasksNames, isChecked, taskId}: Taskstypes) {
                /> 
                Tasks
             </h2>
-            <IconButton src="../assets/global/Buttons/more_horiz.svg" width={24} height={24} alt="more icon"  />
+            <MoreButton />
          </div>
          <div className="body">
             {tasksNames.map(((task, index) => (

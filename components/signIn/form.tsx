@@ -1,3 +1,5 @@
+"use client"
+
 import { useForm, SubmitHandler } from "react-hook-form";
 import Image from "next/image"
 import Link from "next/link"
@@ -9,7 +11,7 @@ type Inputs = {
 };
 
 export default function Form() {
-   const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+   const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
    const onSubmit: SubmitHandler<Inputs> = (data: Inputs) => console.log(data);
 
    return (

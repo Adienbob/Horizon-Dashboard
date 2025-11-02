@@ -1,33 +1,38 @@
 import Image from "next/image"
-import IconButton from "../buttons/iconButton";
 import HoriChart from "./horizontalChart";
-
+import MoreButton from "../buttons/moreHoriz";
+import useSort from "../hooks/useSort";
 
 
 type Data = {
-   names: string[];
-   columnsData?: (string)[][];
+   columnsData: (string)[][];
 }
-export default function ComplexTable({names, columnsData}: Data) {
+export default function ComplexTable({columnsData}: Data) {
+   const { sortedData, handleSort, setIsSorted } = useSort(columnsData)
+   
 
    return (
       <section>
          <div className="head">
             <h2>Complex Table</h2>
-            <IconButton src="../assets/global/Buttons/more_horiz.svg" width={24} height={24} alt="more icon"  />
+            <MoreButton />
          </div>
          <div className="body">
-            
             <table>
                <thead>
                   <tr>
-                     {names?.map((name, index) => (
-                        <th key={index}>{name}</th>
+                     {["NAME", "STATUS", "DATE", "PROGRESS"].map((title, index) => (
+                     <th key={index} onClick={() => {
+                        handleSort(index, title.toLowerCase())
+                        setIsSorted(prev => !prev)
+                     }}>
+                        {title}
+                     </th>
                      ))}
                   </tr>
                </thead>
                <tbody>
-                  {columnsData?.map((data, index) => (
+                  {sortedData.map((data, index) => (
                      <tr key={index}>
                         {data.map((cell, colIndex) => (
                            <td key={colIndex}>
@@ -49,7 +54,7 @@ export default function ComplexTable({names, columnsData}: Data) {
                                  )
                               ) : colIndex === 3 ? (
                                  <div className="barChart">
-                                    <HoriChart label="revenue" data={Number(cell)} />
+                                    {cell}
                                  </div>
                               ) : cell}
                            </td>

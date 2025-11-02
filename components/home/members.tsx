@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MoreVertBtn from "../buttons/moreVert";
 
 
 type Details = {
@@ -21,12 +22,7 @@ function Member({name, title, avatar}: Details) {
             <span>{name}</span>
             <p>{title}</p>
          </div>
-         <Image
-            src={"../assets/global/Buttons/more_vert.svg"}
-            alt=""
-            width={26}
-            height={26}
-         />
+         <MoreVertBtn />
       </div>
    )
 }

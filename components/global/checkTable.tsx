@@ -1,4 +1,4 @@
-import IconButton from "../buttons/iconButton";
+import MoreButton from "../buttons/moreHoriz";
 
 type Data = {
    names: string[];
@@ -12,7 +12,10 @@ export default function CheckTable({names, columnsData, input, className}: Data)
       <section className="checkTable">
          <div className="head">
             <h2>Check Table</h2>
-            <IconButton src="../assets/global/Buttons/more_horiz.svg" width={24} height={24} alt="more icon"  />
+            <MoreButton />
+            <div>
+
+            </div>
          </div>
          <div className="body">
             <table>

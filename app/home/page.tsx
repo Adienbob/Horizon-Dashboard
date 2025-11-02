@@ -37,9 +37,8 @@ export default function Home() {
          />
          <Traffic />
          <ComplexTable 
-            names={["NAME", "STATUS", "DATE", "PROGRESS"]}
             columnsData={[
-               ["Horizon UI PRO", "Approved", "18 Apr 2025", "80" ],
+               ["Horizon UI PRO", "Approved", "18 Apr 2024", "80" ],
                ["Horizon UI Free", "Disable", "18 Apr 2025", "20" ],
                ["Marketplace", "Error", "20 May 2025", "95" ],
                ["Weekly Updates", "Approved", "12 Jul 2024", "40" ]
@@ -68,10 +67,7 @@ export default function Home() {
                   "promotional-lp",
                ]} 
             />
-         <section className="Calender">
-            <h2 className="sr-only">Calender</h2>
-            <Calendar />
-         </section>
+         <Calendar />
          <Lessons />
          <TeamMembers />
          <SecurityCards />

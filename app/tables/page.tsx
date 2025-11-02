@@ -1,7 +1,9 @@
+"use client"
 import Columns from "@/components/data table/4-column";
 import Development from "@/components/data table/development";
 import CheckTable from "@/components/global/checkTable";
 import ComplexTable from "@/components/global/complexTable";
+
 
 
 export default function Tables() {

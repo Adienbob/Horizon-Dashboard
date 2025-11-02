@@ -1,3 +1,5 @@
+"use client"
+
 import ProfileInfo from "@/components/profile/profileInfo";
 import UploadFiles from "@/components/profile/upload";
 import Storage from "@/components/profile/storage";

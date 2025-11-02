@@ -1,26 +1,26 @@
 import {
-  Chart as ChartJS,
-  ArcElement,
-  Title,
-  Tooltip,
-  Legend,
-  ChartOptions,
+   Chart as ChartJS,
+   ArcElement,
+   Title,
+   Tooltip,
+   Legend,
+   ChartOptions,
 } from "chart.js";
 import { Pie } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Title, Tooltip, Legend);
 
 export default function PieChart() {
-  const data = {
-    labels: ["Your files", "System", "Empty"], // slice labels
-    datasets: [
-      {
-        label: "Storage", // optional, will be ignored in tooltip
-        data: [63, 25, 12],
-        backgroundColor: ["#4318FF", "#6AD2FF", "#EFF4FB"], // colors for slices
-      },
-    ],
-  };
+   const data = {
+      labels: ["Your files", "System", "Empty"], // slice labels
+      datasets: [
+         {
+         label: "Storage", // optional, will be ignored in tooltip
+         data: [63, 25, 12],
+         backgroundColor: ["#4318FF", "#6AD2FF", "#EFF4FB"], // colors for slices
+         },
+      ],
+   };
 
    const options: ChartOptions<"pie"> = {
       responsive: true,
