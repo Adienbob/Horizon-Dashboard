@@ -1,4 +1,5 @@
-import Image from "next/image"
+import Image from "next/image";
+import useSort from "../hooks/useSort";
 import HoriChart from "../global/horizontalChart";
 
 
@@ -8,26 +9,24 @@ type CreatorTypes = {
 }
 
 export default function Creators({details, avatars}: CreatorTypes) {
-
+   const { sortedData, handleSort, setIsSorted } = useSort(details)
+   
    return (
 
       <section className="creators">
          <table>
             <thead>
                <tr>
-                  <th>
-                     NAME
-                  </th>
-                  <th>
-                     ARTWORKS
-                  </th>
-                  <th>
-                     RATING
-                  </th>
+                  {["NAME", "ARTWORKS", "RATING"].map((title, index) => (
+                     <th key={index} onClick={() => {
+                        handleSort(index, title.toLowerCase())
+                        setIsSorted(prev => !prev)
+                     }}>{title}</th>
+                  ))}
                </tr>
             </thead>
             <tbody>
-               {details.map((creatorDetails, creatorIndex) => (
+               {sortedData.map((creatorDetails, creatorIndex) => (
                   <tr key={creatorIndex}>
                      {creatorDetails.map((detail, detailIndex) => (
                         detailIndex === 0 ? (

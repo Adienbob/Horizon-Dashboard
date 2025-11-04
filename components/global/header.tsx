@@ -14,7 +14,7 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
    const navLinks = [
       { name: "Main Dashboard", path: "/" },
       { name: "Main Dashboard", path: "/home" },
-      { name: "NFT Marketplace", path: "/marketplace" },
+      { name: "NFT Marketplace", path: "/marketPlace" },
       { name: "Kanban", path: "/kanban" },
       { name: "Data Tables", path: "/tables" },
       { name: "Profile", path: "/profile" },

@@ -4,7 +4,12 @@ export default function Discover() {
 
    return (
       <section className="Discover">
-         {/* <Image  /> */}
+         <Image 
+            src={"/assets/marketplace/Discover/Background Image.jpg"}
+            alt=""
+            width={500}
+            height={500}
+         />
          <h1>
             <strong>Discover, collect and sell extraordinary NFTs</strong>
          </h1>

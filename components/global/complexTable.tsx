@@ -53,9 +53,7 @@ export default function ComplexTable({columnsData}: Data) {
                                  cell
                                  )
                               ) : colIndex === 3 ? (
-                                 <div className="barChart">
-                                    {cell}
-                                 </div>
+                                 <HoriChart data={cell} label="revenue" />
                               ) : cell}
                            </td>
                         ))}

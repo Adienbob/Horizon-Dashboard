@@ -1,33 +1,35 @@
 import MoreButton from "../buttons/moreHoriz";
+import useSort from "../hooks/useSort";
 
 type Data = {
    names: string[];
-   columnsData?: (string | number)[][];
+   columnsData: string[][];
    input?: boolean;
    className?: string[];
 }
 export default function CheckTable({names, columnsData, input, className}: Data) {
+   const { sortedData, handleSort, setIsSorted } = useSort(columnsData)
 
    return (
       <section className="checkTable">
          <div className="head">
             <h2>Check Table</h2>
             <MoreButton />
-            <div>
-
-            </div>
          </div>
          <div className="body">
             <table>
                <thead>
                   <tr>
                      {names?.map((name, index) => (
-                        <th key={index}>{name}</th>
+                        <th key={index} onClick={() => {
+                           handleSort(index, name.toLowerCase(), true)
+                           setIsSorted(prev => !prev)
+                        }}>{name}</th>
                      ))}
                   </tr>
                </thead>
                <tbody>
-                  {columnsData?.map((data, index) => (
+                  {sortedData?.map((data, index) => (
                      <tr key={index}>
                         {data.map((cell, ColIndex) => (
                            <td key={ColIndex}>

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { useState } from "react";
 import PrimaryButton from "../buttons/primaryButtons";
 
 type ImageTypes = {
@@ -24,6 +25,7 @@ type Card = {
 }
 
 export default function Card({img, name, creator, stackedAvatars, bid,}: Card) {
+   const [isFavorite, setIsFavorite] = useState<boolean>(false)
 
    return (
       <article className="card">
@@ -36,13 +38,16 @@ export default function Card({img, name, creator, stackedAvatars, bid,}: Card) {
                className="cardImage"
                quality={100}
             />
-            <Image 
-               src={"/assets/marketplace/Cards/Favorite_Unliked.svg"}
-               alt={img.alt}
-               width={20}
-               height={20}
-               quality={100}
-            />
+            <button onClick={() => setIsFavorite(prev => !prev)}>
+               <Image 
+                  src={isFavorite ? "../assets/marketplace/Cards/Favorite_liked.svg" : "../assets/marketplace/Cards/Favorite_Unliked.svg"}
+                  alt={img.alt}
+                  width={20}
+                  height={20}
+                  className="cardImage"
+                  quality={100}
+               />
+            </button>
          </div>
          <div className="details">
             <span>
