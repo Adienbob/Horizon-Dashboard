@@ -22,8 +22,8 @@ export default function Home() {
          <TotalSpent />
          <StackedChart />
          <CheckTable 
-            names={["NAME", "PROGRESS", "QUANTITY", "DATE", ]} 
-            columnsData={
+            headers={["NAME", "PROGRESS", "QUANTITY", "DATE", ]} 
+            data={
                [
                   ["Horizon UI PRO", "17.5%", "2458", "12 Jan 2021"],
                   ["Horizon UI Free	", "10.8%", "1485", "21 Feb 2021"],
@@ -37,7 +37,8 @@ export default function Home() {
          />
          <Traffic />
          <ComplexTable 
-            columnsData={[
+            headers={["NAME", "STATUS", "DATE", "PROGRESS"]}
+            data={[
                ["Horizon UI PRO", "Approved", "18 Apr 2024", "80" ],
                ["Horizon UI Free", "Disable", "18 Apr 2025", "20" ],
                ["Marketplace", "Error", "20 May 2025", "95" ],

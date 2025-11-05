@@ -5,10 +5,11 @@ import useSort from "../hooks/useSort";
 
 
 type Data = {
-   columnsData: (string)[][];
+   headers: string[];
+   data: (string)[][];
 }
-export default function ComplexTable({columnsData}: Data) {
-   const { sortedData, handleSort, setIsSorted } = useSort(columnsData)
+export default function ComplexTable({headers, data}: Data) {
+   const { sortedData, handleSort, setIsSorted } = useSort(data)
    
 
    return (
@@ -21,7 +22,7 @@ export default function ComplexTable({columnsData}: Data) {
             <table>
                <thead>
                   <tr>
-                     {["NAME", "STATUS", "DATE", "PROGRESS"].map((title, index) => (
+                     {headers.map((title, index) => (
                      <th key={index} onClick={() => {
                         handleSort(index, title.toLowerCase())
                         setIsSorted(prev => !prev)

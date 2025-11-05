@@ -1,46 +1,38 @@
-import IconButton from "../buttons/iconButton";
+import MoreButton from "../buttons/moreHoriz";
+import useSort from "../hooks/useSort";
 
-type Table = {
-   name: string;
-   progress: number;
-   quantity: number;
-   date: string;
+type PropsData = {
+   headers: string[];
+   data: string[][];
 }
 
-type DataTypes = {
-   data: Table[];
-}
-
-export default function Columns({data}: DataTypes) {
+export default function Columns({headers, data}: PropsData) {
+   const { sortedData, handleSort, setIsSorted } = useSort(data)
 
    
    return (
       <section>
          <div className="head">
             <h2>4-Column Table</h2>
-            <IconButton 
-               src="../assets/global/Buttons/more_horiz.svg" 
-               width={24} 
-               height={24} 
-               alt="more icon"  
-            />
+            <MoreButton />
          </div>
          <table>
             <thead>
                <tr>
-                  <th>NAME</th>
-                  <th>PROGRESS</th>
-                  <th>QUANTITY</th>
-                  <th>DATE</th>
+                  {headers?.map((name, index) => (
+                     <th key={index} onClick={() => {
+                        handleSort(index, name.toLowerCase(), true)
+                        setIsSorted(prev => !prev)
+                     }}>{name}</th>
+                  ))}
                </tr>
             </thead>
             <tbody>
-               {data.map((row, index) => (
-                  <tr key={`row-${index}`}>
-                     <td>{row.name}</td>
-                     <td>{row.progress}</td>
-                     <td>{row.quantity}</td>
-                     <td>{row.date}</td>
+               {sortedData?.map((data, index) => (
+                  <tr key={index}>
+                     {data.map((cell, ColIndex) => (
+                        <td key={ColIndex}>{cell}</td>
+                     ))}
                   </tr>
                ))}
             </tbody>

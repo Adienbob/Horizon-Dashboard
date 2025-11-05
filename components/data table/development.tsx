@@ -1,58 +1,69 @@
-
-import IconButton from "../buttons/iconButton";
+import MoreButton from "../buttons/moreHoriz";
 import Image from "next/image"
 import HoriChart from "../global/horizontalChart";
+import { useState} from "react";
+type PropsTypes = {
+   headers: string[],
+   data: (string | string[])[][]
 
-type Table = {
-   name: string;
-   os: string[];
-   date: string;
-   progress: number;
 }
 
-type DataTypes = {
-   data: Table[];
-}
+export default function Development({headers, data}: PropsTypes) {
+   const [sortedData, setSortedData] = useState(data); 
+   const [isSorted, setIsSorted] = useState<boolean>(false)
 
-export default function Development({data}: DataTypes) {
-
+   function handleSort(index: number) {
+      if (!isSorted) {
+         setSortedData(
+            sortedData.toSorted((a, b) => {
+               const aValue = Array.isArray(a[index]) ? a[index].join(", ") : a[index];
+               const bValue = Array.isArray(b[index]) ? b[index].join(", ") : b[index];
+               return bValue.localeCompare(aValue, undefined, { sensitivity: "base" });
+            })
+         );
+      } else {
+         setSortedData(data)
+      }
+   }
    return (
       <section>
          <div className="head">
             <h2>Development Table</h2>
-            <IconButton 
-               src="../assets/global/Buttons/more_horiz.svg" 
-               width={24} 
-               height={24} 
-               alt="more icon"  
-            />
+            <MoreButton />
          </div>
          <table>
             <thead>
                <tr>
-                  <th>NAME</th>
-                  <th>SYSTEM</th>
-                  <th>DATE</th>
-                  <th>PROGRESS</th>
+                  {headers.map((head, index) => (
+                     <th key={index} onClick={() => {
+                        handleSort(index)
+                        setIsSorted(prev => !prev)
+                     }}>{head}</th>
+                  ))}
                </tr>
             </thead>
             <tbody>
-               {data.map((row, index) => (
-                  <tr key={`row-${index}`}>
-                     <td>{row.name}</td>
-                     <td>
-                        {row.os.map((osType, index) => (
-                           osType.toLowerCase() === "apple" 
-                           ? <Image key={`os-${index}`} src={"../assets/data tables/icons/Apple_logo_black 1.svg"} alt="" width={15} height={18} />
-                           : osType.toLowerCase() === "android" 
-                           ? <Image key={`os-${index}`} src={"../assets/data tables/icons/android-seeklogo.com 1.svg"} alt="" width={16} height={18} />
-                           : osType.toLowerCase() === "windows" 
-                           ? <Image key={`os-${index}`} src={"../assets/data tables/icons/Windows_logo_-_2012 1.svg"} alt="" width={19} height={18} />
-                           : ""
-                        ))}
-                     </td>
-                     <td>{row.date}</td>
-                     <td>{row.progress}% <HoriChart label="" data={row.progress} /></td>
+               {sortedData.map((row, rowIndex) => (
+                  <tr key={`row-${rowIndex}`}>
+                     {row.map((cell, cellIndex) => (
+                        <td key={cellIndex}>{
+                           Array.isArray(cell) 
+                           ? cell.map((osType, osIndex) => (
+                              osType === "apple" 
+                              ?  <Image key={`os-${osIndex}`} src={"../assets/data tables/icons/Apple_logo_black 1.svg"} alt="" width={15} height={18} />
+                              : osType.toLowerCase() === "android"
+                              ?  <Image key={`os-${osIndex}`} src={"../assets/data tables/icons/android-seeklogo.com 1.svg"} alt="" width={16} height={18} />
+                              : osType.toLowerCase() === "windows"
+                              ?  <Image key={`os-${osIndex}`} src={"../assets/data tables/icons/Windows_logo_-_2012 1.svg"} alt="" width={19} height={18} />
+                              : ""
+                           ))
+                        : cellIndex === 3 
+                        ?  (
+                           <p>{cell}% <HoriChart data={cell} label="revenue" /></p>
+                        )
+                        : cell
+                     }</td>
+                     ))}
                   </tr>
                ))}
             </tbody>

@@ -11,53 +11,20 @@ export default function Tables() {
    return (
       <>
       
-         <Development data={[
-            {
-               name: "Marketplace", 
-               os: ["apple", "android", "windows"], 
-               date: "12.Jan.2021", 
-               progress: 79.8
-            },
-            {
-               name: "Venus DB PRO", 
-               os: ["apple"], 
-               date: "21.Feb.2021", 
-               progress: 35.4
-            },
-            {
-               name: "Venus DS", 
-               os: ["apple", "windows"], 
-               date: "13.Mar.2021", 
-               progress: 25
-            },
-            {
-               name: "Venus 3D Asset", 
-               os: ["apple", "android", "windows"], 
-               date: "24.Jan.2021",
-               progress: 100
-            },
-            {
-               name: "Marketplace", 
-               os: ["apple", "windows"], 
-               date: "Oct 24, 2022",
-               progress: 75.5
-            },
-            {
-               name: "Phantom", 
-               os: ["apple", "android", "windows"], 
-               date: "21.Feb.2021",
-               progress: 48.5
-            },
-            {
-               name: "Rengo", 
-               os: ["android", "windows"], 
-               date: "13.Mar.2021",
-               progress: 75.5
-            },
+         <Development 
+         headers={["NAME", "TECH", "DATE", "PROGRESS"]}
+         data={[
+            ["Marketplace", ["apple", "android", "windows"], "12.Jan.2021", "79.8"],
+            ["Venus DB PRO", ["apple"], "21.Feb.2021", "35.4"],
+            ["Venus DS", ["apple", "windows"], "13.Mar.2021", "25"],
+            ["Venus 3D Asset", ["apple", "android", "windows"], "24.Jan.2021", "12.8"],
+            ["Marketplace", ["apple", "windows"], "Oct 24, 2022", "75.5"],
+            ["Phantom", ["apple", "android", "windows"], "21.Feb.2021", "48.5"],
+            ["Rengo", ["android", "windows"], "13.Mar.2021", "75.5"],
          ]} />
          <CheckTable 
-            names={["NAME", "PROGRESS", "QUANTITY", "DATE", ]} 
-            columnsData={
+            headers={["NAME", "PROGRESS", "QUANTITY", "DATE", ]} 
+            data={
                [
                   ["Marketplace", "75.5%", "2458", "12.Jan.2021"],
                   ["Horizon UI Free	", "35.4%", "1485", "21.Feb.2021"],
@@ -86,54 +53,20 @@ export default function Tables() {
             ]}
          />
          <Columns
+            headers={["NAME", "PROGRESS", "QUANTITY", "DATE"]}
             data={[
-               {
-               name: "Marketplace",
-               quantity: 2458,
-               date: "12.Jan.2021", 
-               progress: 79.8
-            },
-            {
-               name: "Venus DB PRO",
-               quantity: 1485,
-               date: "21.Feb.2021", 
-               progress: 35.4
-            },
-            {
-               name: "Venus DS",
-               quantity: 1024,
-               date: "13.Mar.2021", 
-               progress: 25
-            },
-            {
-               name: "Venus 3D Asset",
-               quantity: 858,
-               date: "24.Jan.2021",
-               progress: 248
-            },
-            {
-               name: "Marketplace",
-               quantity: 985,
-               date: "Oct 24, 2022",
-               progress: 75.5
-            },
-            {
-               name: "Phantom", 
-               quantity: 506,
-               date: "21.Feb.2021",
-               progress: 48.5
-            },
-            {
-               name: "Rengo",
-               quantity: 100,
-               date: "13.Mar.2021",
-               progress: 75.5
-            },
+               ["Marketplace", "2458", "12.Jan.2021", "79.8"],
+               ["Venus DB PRO", "1485", "21.Feb.2021", "35.4"],
+               ["Venus DS", "1024", "13.Mar.2021", "25"],
+               ["Venus 3D Asset", "858", "24.Jan.2021", "98.4"],
+               ["Marketplace", "985", "Oct 24, 2022", "75.5"],
+               ["Phantom", "506", "21.Feb.2021", "48.5"],
+               ["Rengo", "100", "13.Mar.2021", "75.5"],
             ]}
          />
          <ComplexTable 
-            names={["NAME", "STATUS", "DATE", "PROGRESS"]}
-            columnsData={[
+            headers={["NAME", "STATUS", "DATE", "PROGRESS"]}
+            data={[
                ["Horizon UI PRO", "Approved", "18 Apr 2025", "80" ],
                ["Horizon UI Free", "Disable", "18 Apr 2025", "20" ],
                ["Marketplace", "Error", "20 May 2025", "95" ],
