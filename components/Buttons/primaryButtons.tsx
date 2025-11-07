@@ -1,13 +1,13 @@
 
 type Buttons = {
    text: string;
-   color: string;
+   className?: string;
 }
 
-export default function PrimaryButton({text, color}: Buttons) {
+export default function PrimaryButton({text, className}: Buttons) {
 
    return (
-      <button className={`primary-btn ${color}`}>
+      <button className={`${className}` }>
          {text}
       </button>
    )
