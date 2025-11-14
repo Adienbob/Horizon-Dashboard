@@ -14,7 +14,7 @@ import { Bar } from "react-chartjs-2";
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 type ChartData = {
-   label: string;
+   label?: string;
    data: number | string;
 }
 
@@ -24,7 +24,7 @@ export default function HoriChart({label, data}: ChartData) {
       labels: [""],
       datasets: [
          {
-         label: label,
+         label: label || "",
          data: [data], 
          backgroundColor: "#4318FF",
          borderRadius: 10,

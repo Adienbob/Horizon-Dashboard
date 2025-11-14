@@ -1,29 +1,34 @@
-import { Switch } from "@material-tailwind/react";
+"use client";
 
-type SwitchTypes = {
-   check: boolean;
-}
+import { useState } from "react";
 
-export function SwitchCustomStyles({check}: SwitchTypes) {
+type SwitchProps = {
+   defaultChecked?: boolean;
+};
+
+export default function SwitchBtn({ defaultChecked = false }: SwitchProps) {
+   const [checked, setChecked] = useState(defaultChecked);
+
+   const toggle = () => {
+      const newValue = !checked;
+      setChecked(newValue);
+   };
+
    return (
-      <div>
-         <Switch
-            id="custom-switch-component"
-            checked={check}
-            ripple={false}
-            className="h-full w-full checked:bg-[#2ec946]"
-            containerProps={{
-               className: "w-11 h-6",
-            }}
-            circleProps={{
-               className: "before:hidden left-0.5 border-none",
-            }}
-            onResize={undefined}
-            onResizeCapture={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
-            crossOrigin={undefined}
+      <button
+         type="button"
+         role="switch"
+         aria-checked={checked}
+         onClick={toggle}
+         className={`relative inline-flex h-6 w-12 items-center rounded-full transition-colors duration-300 focus:outline-none ${
+         checked ? "bg-green-500" : "bg-gray-500"
+         }`}
+      >
+         <span
+         className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform duration-300 ${
+            checked ? "translate-x-6" : "translate-x-1"
+         }`}
          />
-      </div>
+      </button>
    );
 }

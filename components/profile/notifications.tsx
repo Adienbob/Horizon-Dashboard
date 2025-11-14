@@ -1,5 +1,5 @@
 import IconButton from "../buttons/iconButton";
-import { SwitchCustomStyles } from "../buttons/toggle";
+import  SwitchBtn from "../buttons/toggle";
 
 
 export default function Notifications() {
@@ -12,43 +12,43 @@ export default function Notifications() {
          </div>
          <div className="body">
             <div className="notification">
-               <SwitchCustomStyles check={true} />
+               <SwitchBtn defaultChecked={true} />
                <span>Item update notifications</span>
             </div>
             <div className="notification">
-               <SwitchCustomStyles check={false} />
+               <SwitchBtn defaultChecked={false} />
                <span>Item comment notifications</span>
             </div>
             <div className="notification">
-               <SwitchCustomStyles check={true} />
+               <SwitchBtn defaultChecked={true} />
                <span>Buyer review notifications</span>
             </div>
             <div className="notification">
-               <SwitchCustomStyles check={false} />
+               <SwitchBtn defaultChecked={false} />
                <span>Rating reminders notifications</span>
             </div>
             <div className="notification">
-               <SwitchCustomStyles check={false} />
+               <SwitchBtn defaultChecked={false} />
                <span>Meetups near you notifications</span>
             </div>
             <div className="notification">
-               <SwitchCustomStyles check={true} />
+               <SwitchBtn defaultChecked={true} />
                <span>Company news notifications</span>
             </div>
             <div className="notification">
-               <SwitchCustomStyles check={true} />
+               <SwitchBtn defaultChecked={true} />
                <span>New launches and projects</span>
             </div>
             <div className="notification">
-               <SwitchCustomStyles check={false} />
+               <SwitchBtn defaultChecked={false} />
                <span>Monthly product changes</span>
             </div>
             <div className="notification">
-               <SwitchCustomStyles check={false} />
+               <SwitchBtn defaultChecked={false} />
                <span>Subscribe to newsletter</span>
             </div>
             <div className="notification">
-               <SwitchCustomStyles check={true} />
+               <SwitchBtn defaultChecked />
                <span>Email me when someone follows me</span>
             </div>
          </div>

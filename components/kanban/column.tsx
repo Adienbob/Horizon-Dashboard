@@ -1,8 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import IconButton from "../buttons/iconButton";
-import PrimaryButton from "../buttons/primaryButtons";
 import { useState } from "react";
 import ArticleCard from "./article";
 

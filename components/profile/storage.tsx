@@ -1,5 +1,7 @@
 import IconButton from "../buttons/iconButton"
 import Image from "next/image"
+import MoreHorizBtn from "../buttons/moreHoriz";
+import HoriChart from "../global/horizontalChart";
 
 
 export default function Storage() {
@@ -7,7 +9,7 @@ export default function Storage() {
    return (
       <section>
          <h2 className="sr-only">Storage</h2>
-         <IconButton src="../assets/global/Buttons/more_horiz.svg" width={24} height={24} alt="more icon"  />
+         <MoreHorizBtn />
          <div className="body">
             <Image 
                src={"../assets/profile/icons/cloud_done.svg"}
@@ -22,7 +24,7 @@ export default function Storage() {
             <span className="used-space">25.6 Gb</span>
             <span className="total-space">50 gb</span>
          </div>
-         {/* chart */}
+         <HoriChart data={25.6} />
       </section>
    )
 }
