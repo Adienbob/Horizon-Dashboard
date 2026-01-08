@@ -11,16 +11,16 @@ type Details = {
 function Member({name, title, avatar}: Details) {
 
    return (
-      <div className="member">
+      <div className="flex items-center shadow-[0_18px_40px_0_rgba(112,144,176,0.12)] px-4 py-3 rounded-2xl">
          <Image 
             src={avatar}
             alt=""
             width={46}
             height={46}
          />
-         <div className="details">
-            <span>{name}</span>
-            <p>{title}</p>
+         <div className="ml-[18px] mr-auto">
+            <span className="leading-7">{name}</span>
+            <p className="text-(--secondary) font-medium leading-5">{title}</p>
          </div>
          <MoreVertBtn />
       </div>
@@ -42,7 +42,7 @@ export default function TeamMembers() {
                />
             </button>
          </div>
-         <div className="body">
+         <div className="grid gap-4">
             <Member name="Adela Parkson" title="Creative Director" avatar="../assets/home/team members/adela.svg" />
             <Member name="Christian Mad" title="Product Designer" avatar="../assets/home/team members/christian.svg" />
             <Member name="Jason Statham" title="Junior Graphic Designer" avatar="../assets/home/team members/jason_statham.svg" />

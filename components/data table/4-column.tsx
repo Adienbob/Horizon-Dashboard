@@ -11,7 +11,7 @@ export default function Columns({headers, data}: PropsData) {
 
    
    return (
-      <section>
+      <section id="table">
          <div className="head">
             <h2>4-Column Table</h2>
             <MoreButton />
@@ -23,7 +23,7 @@ export default function Columns({headers, data}: PropsData) {
                      <th key={index} onClick={() => {
                         handleSort(index, name.toLowerCase(), true)
                         setIsSorted(prev => !prev)
-                     }}>{name}</th>
+                     }}><button>{name}</button></th>
                   ))}
                </tr>
             </thead>

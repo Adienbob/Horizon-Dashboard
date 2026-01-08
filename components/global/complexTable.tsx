@@ -13,7 +13,7 @@ export default function ComplexTable({headers, data}: Data) {
    
 
    return (
-      <section>
+      <section id="table">
          <div className="head">
             <h2>Complex Table</h2>
             <MoreButton />
@@ -27,7 +27,7 @@ export default function ComplexTable({headers, data}: Data) {
                         handleSort(index, title.toLowerCase())
                         setIsSorted(prev => !prev)
                      }}>
-                        {title}
+                        <button>{title}</button>
                      </th>
                      ))}
                   </tr>
@@ -39,17 +39,17 @@ export default function ComplexTable({headers, data}: Data) {
                            <td key={colIndex}>
                               {colIndex === 1 ? (
                                  cell.toLowerCase() === "approved" ? (
-                                 <>
+                                 <div className="flex gap-1.5">
                                     <Image src={"../assets/global/complexTable/check_circle.svg"} alt={cell} width={20} height={20} /> {cell}
-                                 </>
+                                 </div>
                                  ) : cell.toLowerCase() === "disable" ? (
-                                 <>
+                                 <div className="flex gap-1.5">
                                     <Image src={"../assets/global/complexTable/cancel.svg"} alt={cell} width={20} height={20} /> {cell}
-                                 </>
+                                 </div>
                                  ) : cell.toLowerCase() === "error" ? (
-                                 <>
+                                 <div className="flex gap-1.5">
                                     <Image src={"../assets/global/complexTable/error.svg"} alt={cell} width={20} height={20} /> {cell}
-                                 </>
+                                 </div>
                                  ) : (
                                  cell
                                  )

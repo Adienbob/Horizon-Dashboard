@@ -1,6 +1,19 @@
+import "@styles/globals.css"
 import ClientLayout from "@/components/global/clientLayout";
-import "./globals.css";
 import type { Metadata } from "next";
+import { DM_Sans, Poppins } from "next/font/google";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-main",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-secondary",
+});
 
 export const metadata: Metadata = {
   title: "Horizon Dashboard",
@@ -13,12 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="light">
-      <body>
+    <html>
+      <body className={`${dmSans.variable} ${poppins.variable}`}>
         <ClientLayout>
           {children}
         </ClientLayout>
       </body>
-    </html>
+    </html> 
   );
 }

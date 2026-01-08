@@ -26,7 +26,7 @@ export default function Development({headers, data}: PropsTypes) {
       }
    }
    return (
-      <section>
+      <section id="table">
          <div className="head">
             <h2>Development Table</h2>
             <MoreButton />
@@ -38,7 +38,7 @@ export default function Development({headers, data}: PropsTypes) {
                      <th key={index} onClick={() => {
                         handleSort(index)
                         setIsSorted(prev => !prev)
-                     }}>{head}</th>
+                     }}><button>{head}</button></th>
                   ))}
                </tr>
             </thead>

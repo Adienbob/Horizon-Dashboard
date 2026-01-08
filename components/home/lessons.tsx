@@ -3,25 +3,25 @@ import PrimaryButton from "../buttons/primaryButtons";
 
 export default function Lessons() {
    return (
-      <section className="lessons">
+      <section className="rounded-[20px] bg-white lessons text-(--primary) tracking-[-0.02rem] font-bold" id="lessons">
             <h2 className="sr-only">New Lessons</h2>
-            <div className="head">
+            <div className="flex items-center gap-3 px-6 pt-4">
                <Image 
                   src={"../assets/home/lessons/fire.svg"}
                   alt=""
                   width={48}
                   height={48}
                />
-               <div>
-                  <p>Business Design</p>
-                  <span>New lession is available</span>
+               <div className="">
+                  <p className="text-(--secondary) text-[12px] leading-5">Business Design</p>
+                  <span className="text-[16px] leading-7">New lession is available</span>
                </div>
             </div>
             <div className="body">
-               <span>What do you need to know to create better products?</span>
-               <div>
-                  <div className="lesson-details">
-                     <span className="timer">
+               <span className="text-xl leading-8 mt-[38px] block px-6 mb-[29px] mr-20">What do you need to know to create better products?</span>
+               <div className="bg-(--lessons-btns-bg) px-6 pb-4 rounded-[20px] rounded-t-none pt-4">
+                  <div className="flex justify-between leading-6 text-[14px] mb-9">
+                     <span className="flex gap-1">
                         <Image 
                            src={"../assets/home/lessons/timer.svg"}
                            alt=""
@@ -30,24 +30,24 @@ export default function Lessons() {
                         /> 
                         85 mins
                      </span>
-                     <span className="video">
+                     <span className="flex gap-1">
                         <Image 
                            src={"../assets/home/lessons/slow_motion_video.svg"}
                            alt=""
                            width={24}
                            height={24}
                         /> 
-                        video format
+                        Video format
                      </span>
                   </div>
-                  <div className="start-lesson">
+                  <div className="grid gap-5">
                      <Image 
                         src={"../assets/home/lessons/avatars.svg"}
                         alt=""
                         width={109.5}
                         height={34}
                      />
-                     <PrimaryButton text="Get Started" color="blue" />
+                     <PrimaryButton text="Get Started"/>
                   </div>
                </div>
             </div>

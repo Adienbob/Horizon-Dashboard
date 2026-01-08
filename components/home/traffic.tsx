@@ -80,11 +80,20 @@ export default function Traffic() {
    <section className="dailyTraffic">
          <h2 className="sr-only">Daily Traffic</h2>
          <div className="head">
-            <div>
-               <p>Daily Traffic</p>
-               <p>+2.45%</p>
-            </div>
-            <p><strong>2.579</strong>visitors</p>
+            <p className="text-(--secondary) text-[14px] font-medium">Daily Traffic<strong className="text-(--primary) text-[34px] block">2.579 <span className="text-(--secondary) text-[14px] font-medium">visitors</span></strong></p>
+            <span className="text-(--growth) flex text-sm font-bold pl-2">
+               <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clipPath="url(#clip0_201_2539)">
+                     <path d="M5.86963 10.4697L10.0622 6.7305L14.2547 10.4697H5.86963Z" fill="#05CD99"/>
+                  </g>
+                  <defs>
+                     <clipPath id="clip0_201_2539">
+                        <rect width="20.1242" height="17.948" fill="white"/>
+                     </clipPath>
+                  </defs>
+               </svg>
+               +2.45%
+            </span>
          </div>
          <div className="body">
             <Bar data={data} options={barOptions} />

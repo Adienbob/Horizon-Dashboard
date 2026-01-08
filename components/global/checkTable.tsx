@@ -11,7 +11,7 @@ export default function CheckTable({headers, data, input, className}: Data) {
    const { sortedData, handleSort, setIsSorted } = useSort(data)
 
    return (
-      <section className="checkTable">
+      <section id="table">
          <div className="head">
             <h2>Check Table</h2>
             <MoreButton />
@@ -24,7 +24,7 @@ export default function CheckTable({headers, data, input, className}: Data) {
                         <th key={index} onClick={() => {
                            handleSort(index, name.toLowerCase(), true)
                            setIsSorted(prev => !prev)
-                        }}>{name}</th>
+                        }}><button>{name}</button></th>
                      ))}
                   </tr>
                </thead>
@@ -34,10 +34,10 @@ export default function CheckTable({headers, data, input, className}: Data) {
                         {data.map((cell, ColIndex) => (
                            <td key={ColIndex}>
                               {input && ColIndex === 0 ? (
-                                 <>
+                                 <div className="flex items-center gap-1">
                                     <input type="checkbox" aria-labelledby={className?.[index]} />
                                     <span id={className?.[index]}>{cell}</span>
-                                 </>
+                                 </div>
                               ) : (
                                  cell
                               )}

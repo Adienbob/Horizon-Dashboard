@@ -8,25 +8,30 @@ type Icon = {
 }
 
 type StatCardProps = {
-   title: string;          
-   value: string | number; 
-   icon?: Icon;  
+   title: string;
+   value: string | number;
+   icon?: Icon;
    className?: string;
-   growth?: string;     
+   growth?: string;
+   period?: string;
 };
 
-function OverviewCard({ title, value, icon, className}: StatCardProps) {
+function OverviewCard({ title, value, icon, className, growth, period}: StatCardProps) {
    
    return (
-      <div className={className}>
+      <div className="bg-(--component-bg) rounded-[20px] flex h-[90px] items-center" id={className}>
          {icon ? <Image 
+            className="ml-[17px] mr-4"
             src={icon.src} 
             alt={icon.alt} 
             width={icon.width} 
             height={icon.height} 
          /> : ""}
-         <p>{title}</p>
-         <p>{value}</p>
+         <div className={`${className === "sales" ? "ml-[23px]" : ""}`}>
+            <p className="text-(--secondary) text-sm">{title}</p>
+            <p className="text-(--primary) text-2xl font-bold">{value}</p>
+            {growth ? <p className="text-(--secondary)"><span className="text-(--growth) font-bold">{growth} </span>{period}</p> : "" }
+         </div>
       </div>
    )
 }
@@ -34,8 +39,8 @@ function OverviewCard({ title, value, icon, className}: StatCardProps) {
 export default function DashboardOverview() {
    
    return (
-      <section className="hero">
-         <h1 className="src-o">Overview</h1>
+      <section className="grid gap-5" id="hero">
+         <h1 id="sr-only">Overview</h1>
          <OverviewCard 
             icon={{
                src: "../assets/home/overview/chart.svg",
@@ -43,8 +48,8 @@ export default function DashboardOverview() {
                width: 56,
                height: 56
             }} 
-            className="stat" 
-            title="Earning" 
+            className="earnings" 
+            title="Earnings" 
             value="$340.5" 
          />
          <OverviewCard 
@@ -54,14 +59,16 @@ export default function DashboardOverview() {
                width: 56,
                height: 56
             }} 
-            className="stat" 
+            className="spend" 
             title="Spend this month" 
             value="$642.39" 
          />
          <OverviewCard 
-            className="stat" 
+            className="sales" 
             title="Sales" 
             value="$574.34" 
+            growth="+23%"
+            period="since last month"
          />
          <OverviewCard 
             icon={{
@@ -70,7 +77,7 @@ export default function DashboardOverview() {
                width: 79,
                height: 50
             }} 
-            className="stat" 
+            className="balance" 
             title="Your Balance" 
             value="$1,000" 
          />
@@ -81,7 +88,7 @@ export default function DashboardOverview() {
                width: 56,
                height: 56
             }} 
-            className="stat" 
+            className="tasks" 
             title="New Tasks" 
             value="145" 
          />
@@ -92,7 +99,7 @@ export default function DashboardOverview() {
                width: 56,
                height: 56
             }} 
-            className="stat" 
+            className="projects" 
             title="Total Projects" 
             value="$2433" 
          />

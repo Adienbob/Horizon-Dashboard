@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+   /* Primary Colors */
+   --primary: #2B3674;
+   --secondary: #A3AED0;
+   --primary-blue: #4318FF;
+
+   /* Accent / Brand */
+   --color-accent-yellow: #FFCE20;
+
+   /* Background Colors */
+   --main-bg: #F4F7FE;
+   --component-bg: #FFFFFF;
+   --checkbox-bg: #EFF4FB;
+   --lessons-btns-bg: #FAFCFE;
+   --border: #E9EDF7;
+
+   /* Neutral / Gray Scale */
+   --color-gray-900: #1B2559;
+   --color-gray-500: #707EAE;
+   --gray-400: #8F9BBA;
+   --color-gray-300: #B0BBD5;
+   --color-gray-200: #E0E5F2;
+
+   /* Success / Growth */
+   --growth: #05CD99;
+
+   /* Danger / Error */
+   --color-danger: #EE5D50;
+   --color-danger-light: #FEEFEE;
+   --btn-hover: #edf2f7;
+
+   /* buttons background */
+   --bid: #11047A;
+   --pending: #FFB547;
+   --error: #E31A1A;
+   --update: #3965FF;
+   --done: #01B574;
+
+}
+
+/* base */
+
+body {
+   font-family: var(--font-main);
+}
+
+/* sections base styles */
+
+#sr-only {
+   @apply hidden
+}
+
+aside #header {
+   font-family: var(--font-secondary) 
+}
+
+button {
+   @apply cursor-pointer
+}
+
+section:not(#hero, #lessons ) {
+   @apply rounded-[20px] bg-white px-5 py-4 font-bold tracking-[-0.02rem] text-(--primary)
+}
+
+section .head {
+   @apply flex justify-between mb-5
+}
+
+section .head h2, h3, h4, h5, h6 {
+   @apply text-(--primary) font-bold text-[18px]
+}
+
+section .head button {
+   @apply bg-(--main-bg) rounded-[10px] p-2 hover:bg-(--btn-hover)
+}
+
+/* tables base styles */
+
+#table table {
+   @apply w-full table-fixed border-collapse text-left text-[14px]
+}
+
+#table thead th {
+   @apply text-(--secondary) text-[12px] font-bold border-b border-(--border) pb-2.5
+}
+
+#table tbody td {
+   @apply text-(--primary) font-bold py-2
+}
