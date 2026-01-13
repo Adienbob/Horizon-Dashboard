@@ -26,6 +26,9 @@
    /* Success / Growth */
    --growth: #05CD99;
 
+   --watch-video: #E9E3FF;
+   --discover: #E3DAFF;
+
    /* Danger / Error */
    --color-danger: #EE5D50;
    --color-danger-light: #FEEFEE;
@@ -60,8 +63,12 @@ button {
    @apply cursor-pointer
 }
 
-section:not(#hero, #lessons ) {
-   @apply rounded-[20px] bg-white px-5 py-4 font-bold tracking-[-0.02rem] text-(--primary)
+section:not(#hero, #lessons, #trendingCards, #recentlyCards, #discover ) {
+   @apply bg-white px-5 py-4
+}
+
+section {
+   @apply rounded-[20px] font-bold tracking-[-0.02rem] text-(--primary)
 }
 
 section .head {

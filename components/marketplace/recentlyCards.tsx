@@ -3,9 +3,9 @@ import Card from "./cards"
 export default function RecentlyCards() {
 
    return (
-      <section className="recentlyCards">
-         <h2>Recently Added</h2>
-         <div className="cards">
+      <section id="recentlyCards">
+         <h2 className="ml-5 my-5 text-2xl">Recently Added</h2>
+         <div className="grid gap-5">
             <Card 
                img={{
                   src: "/assets/marketplace/Cards/Swipe.jpg",

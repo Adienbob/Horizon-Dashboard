@@ -17,8 +17,6 @@ const links = [
 
 export default function SideBar({ isOpen, setIsOpen }: SidebarState) {
    const pathname = decodeURIComponent(usePathname());
-   // console.log(links[4].href)
-   console.log(pathname)
 
    return (
       <aside

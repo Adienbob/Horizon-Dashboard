@@ -16,27 +16,27 @@ export default function History({cards}: CardsTypes) {
 
    return (
       <section className="History">
-         <div className="head">
+         <div className="flex justify-between">
             <h2>History</h2>
-            <button>See all</button>
+            <button className="text-(--primary-blue) rounded-full font-normal px-5 hover:bg-(--btn-hover) bg-(--main-bg) leading-6 py-1.5">See all</button>
          </div>
-         <div className="body">
+         <div className="grid gap-5">
             {cards.map((cardDetails, cardIndex) => (
-               <article key={cardIndex}>
-                  <div className="info">
+               <article key={cardIndex} className="p-2.5 rounded-[20px] flex items-center justify-between transform transition-transform duration-300 ease-out hover:scale-102 hover:shadow-[0_18px_40px_0_rgba(112,144,176,0.12)]">
+                  <div className="flex items-center">
                      <Image 
                         src={cardDetails.img}
                         alt=""
                         width={66}
                         height={66}
                      />
-                     <span>
+                     <span className="ml-[18px]">
                         {cardDetails.name}
-                        <p>{cardDetails.creator}</p>
+                        <p className="text-(--secondary) font-normal text-[14px]">{cardDetails.creator}</p>
                      </span>
                   </div>
-                  <div className="stats">
-                     <span>
+                  <div className="flex gap-5">
+                     <span className="flex gap-2.5">
                         <Image 
                            src={"/assets/marketplace/History/arrow.svg"}
                            alt=""
@@ -46,9 +46,8 @@ export default function History({cards}: CardsTypes) {
                         {cardDetails.ETH}
                         ETH
                      </span>
-                     <p>
-                        {cardDetails.time}
-                        ago
+                     <p className="text-(--secondary) font-normal text-[14px]">
+                        {cardDetails.time} ago
                      </p>
                   </div>
                </article>

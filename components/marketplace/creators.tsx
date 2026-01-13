@@ -13,12 +13,18 @@ export default function Creators({details, avatars}: CreatorTypes) {
    
    return (
 
-      <section className="creators">
+      <section className="leading-6 mb-5" id="table">
+         <div className="flex justify-between mb-5">
+            <h2 className="leading-9 text-[20px]">
+               Top Creators
+            </h2>
+            <button className="text-(--primary-blue) rounded-full font-normal px-5 hover:bg-(--btn-hover) bg-(--main-bg) leading-6 py-1.5">See all</button>
+         </div>
          <table>
             <thead>
                <tr>
                   {["NAME", "ARTWORKS", "RATING"].map((title, index) => (
-                     <th key={index} onClick={() => {
+                     <th key={index} className="text-(--secondary) font-normal" onClick={() => {
                         handleSort(index, title.toLowerCase())
                         setIsSorted(prev => !prev)
                      }}>{title}</th>
@@ -30,7 +36,7 @@ export default function Creators({details, avatars}: CreatorTypes) {
                   <tr key={creatorIndex}>
                      {creatorDetails.map((detail, detailIndex) => (
                         detailIndex === 0 ? (
-                           <td key={detailIndex}>
+                           <td key={detailIndex} className="flex text-[14px] items-center gap-1.5">
                               <Image 
                                  src={avatars[creatorIndex]}
                                  alt=""
@@ -44,7 +50,7 @@ export default function Creators({details, avatars}: CreatorTypes) {
                               <td key={detailIndex}><HoriChart label="" data={detail} /></td>
                            )
                         ) : (
-                           <td key={detailIndex}>{detail}</td>
+                           <td key={detailIndex} className="text-[14px] text-(--secondary) font-normal">{detail}</td>
                         )
                         
                      ))}
