@@ -37,15 +37,15 @@ export default function Columns({className, columnHeader, articles}: KanbanData)
    }
 
    return (
-      <section className={className}>
+      <section id={className} className="">
          <div className="head">
-            <h2>{columnHeader}</h2>
+            <h2 className="text-[32px]">{columnHeader}</h2>
             <button onClick={() => setIsAddArticleOpen(prev => !prev)}>
                <Image 
                   src={"../assets/data tables/icons/add_icon.svg"}
                   alt=""
-                  width={50}
-                  height={50}
+                  width={24}
+                  height={24}
                />
             </button>
             {isAddArticleOpen ? 
@@ -70,7 +70,7 @@ export default function Columns({className, columnHeader, articles}: KanbanData)
                </form>
             : ""}
          </div>
-         <div className="body">
+         <div className="grid gap-5">
             {articles.map((article, index) => (
                <ArticleCard article={article}  key={index}/>
             ))}

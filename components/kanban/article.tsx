@@ -35,10 +35,10 @@ export default function ArticleCard({article}: ArticleType) {
       }
    }, [])
    return (
-      <article>
-         <div className="header">
-            <h3>{article.head}</h3>
-            <div className="editBtnContainer" onClick={() => setIsPopupOpen(prev => !prev)}>
+      <article className="rounded-[15px] shadow-[0_18px_40px_0_rgba(112,144,176,0.12)] p-[23px]">
+         <div className="flex items-center justify-between mb-[21px]">
+            <h3 className="leading-7">{article.head}</h3>
+            <div className="flex items-center" onClick={() => setIsPopupOpen(prev => !prev)}>
                <IconButton 
                   src="../assets/data tables/icons/edit.svg"
                   alt=""
@@ -56,19 +56,21 @@ export default function ArticleCard({article}: ArticleType) {
             </select>
             : ""}
          </div>
-         <div className="body">
+         <div>
             {article.banner ? 
-               <Image 
-                  src={article.banner}
-                  alt={""}
-                  width={50}
-                  height={50}
-               />
+               <div className="h-[280px] relative w-full">
+                  <Image 
+                     src={article.banner}
+                     alt={""}
+                     fill
+                     className="object-cover object-center rounded-[20px]"
+                  />
+               </div>
                : ""
             }
-            <p>{article.content}</p>
+            <p className="text-(--secondary) font-normal leading-[26px]">{article.content}</p>
          </div>
-         <div className="footer">
+         <div className="flex mt-[29px] justify-between">
             {article.avatars?
             <Image 
                src={article.avatars}
@@ -77,7 +79,17 @@ export default function ArticleCard({article}: ArticleType) {
                height={50}
             />
             : ""}
-            <PrimaryButton text={article.status} className={article.status.toLowerCase()} />
+            <div className="text-[10px] w-[94px] h-7">
+               <PrimaryButton text={article.status} weight="medium" className="rounded-[10px]" background={
+                  article.status === "ERRORS" ?
+                  "bg-(--error)"
+                  : article.status === "DONE" ?
+                  "bg-(--done)" 
+                  : article.status === "PENDING" ?
+                  "bg-(--pending)" 
+                  : "bg-(--update)"
+               } />
+            </div>
          </div>
       </article>
    )
