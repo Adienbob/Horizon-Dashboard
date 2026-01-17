@@ -7,10 +7,10 @@ export default function Notifications() {
    return (
       <section>
          <div className="head">
-            <h2>Notifications</h2>
+            <h2 className="text-2xl">Notifications</h2>
             <IconButton src="../assets/global/Buttons/more_horiz.svg" width={24} height={24} alt="more icon"  />
          </div>
-         <div className="body">
+         <div className="grid *:flex *:gap-[15px] gap-5">
             <div className="notification">
                <SwitchBtn defaultChecked={true} />
                <span>Item update notifications</span>

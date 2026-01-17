@@ -21,12 +21,12 @@ export default function SwitchBtn({ defaultChecked = false }: SwitchProps) {
          aria-checked={checked}
          onClick={toggle}
          className={`relative inline-flex h-6 w-12 items-center rounded-full transition-colors duration-300 focus:outline-none ${
-         checked ? "bg-green-500" : "bg-gray-500"
+         checked ? "bg-(--primary-blue)" : "bg-(--toggle-off)"
          }`}
       >
          <span
-         className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform duration-300 ${
-            checked ? "translate-x-6" : "translate-x-1"
+         className={`inline-block h-4.5 w-4.5 transform rounded-full bg-white transition-transform duration-300 ${
+            checked ? "translate-x-6.5" : "translate-x-1"
          }`}
          />
       </button>

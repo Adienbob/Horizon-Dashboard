@@ -18,21 +18,25 @@ type ProjectTypes = {
 function Project({head, rank, img}: ProjectTypes) {
 
    return (
-      <article>
-         <Image 
-            src={img.src}
-            alt={img.alt}
-            width={img.width}
-            height={img.height}
-         />
-         <span>{head}</span>
-         <p>Project #{rank} <Link href={"#"} /></p>
-         <IconButton 
-            src="../assets/profile/icons/edit.svg"
-            alt=""
-            width={18}
-            height={18}
-         />
+      <article className="flex justify-between p-3.5 shadow-[0_18px_40px_0_rgba(112,144,176,0.12)] rounded-2xl">
+         <div className="flex items-center gap-[19px]">
+            <Image 
+               src={img.src}
+               alt={img.alt}
+               width={img.width}
+               height={img.height}
+            />
+            <div className="">
+               <span>{head}</span>
+               <p className="text-(--secondary) font-medium text-sm">Project #{rank} <span className="px-0.5">•</span>  <Link href={"#"} className="text-(--primary-blue) underline">See project details</Link></p>
+            </div>
+         </div>
+            <IconButton 
+               src="../assets/profile/icons/edit.svg"
+               alt=""
+               width={18}
+               height={18}
+            />
       </article>
    )
 }
@@ -41,10 +45,10 @@ export default function Projects() {
 
    return (
       
-      <section className="all-projects">
-         <h2>All Projects</h2>
-         <p className="description">Here you can find more details about your projects. Keep you user engaged by providing meaningful information.</p>
-         <div className="projects">
+      <section className="all-projects shadow-[14px_17px_40px_4px_rgba(112,144,176,0.08)]">
+         <h2 className="text-[20px]">All Projects</h2>
+         <p className="text-(--secondary) font-normal leading-[26px]">Here you can find more details about your projects. Keep you user engaged by providing meaningful information.</p>
+         <div className="grid gap-5">
             <Project 
                head="Technology behind the Blockchain"
                rank={1}

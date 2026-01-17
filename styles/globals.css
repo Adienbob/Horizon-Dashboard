@@ -19,9 +19,9 @@
    /* Neutral / Gray Scale */
    --color-gray-900: #1B2559;
    --color-gray-500: #707EAE;
-   --gray-400: #8F9BBA;
+   --extensions: #8F9BBA;
    --color-gray-300: #B0BBD5;
-   --color-gray-200: #E0E5F2;
+   --toggle-off: #E0E5F2;
 
    /* Success / Growth */
    --growth: #05CD99;
