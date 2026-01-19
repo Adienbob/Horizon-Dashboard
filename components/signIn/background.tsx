@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Background() {
 
    return (
-      <section>
+      <section className="hidden">
          <Image 
             src={"/assets/signIn/images/Background 5.4.png"}
             alt=""

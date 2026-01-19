@@ -18,7 +18,7 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
       { name: "Kanban", path: "/Kanban" },
       { name: "Data Tables", path: "/tables" },
       { name: "Profile", path: "/profile" },
-      { name: "Sign In", path: "/signin" },
+      { name: "Sign In", path: "/sign" },
    ];
    const current = navLinks.find( link => link.path === pathName);
 
@@ -50,7 +50,7 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
       }
    }
    return (
-      <header className="sticky top-2 z-30 bg-white/10 p-2 backdrop-blur-xl rounded-xl">
+      <header className={`${current?.path === "/sign" ? "hidden" : ""} sticky top-2 z-30 bg-white/10 p-2 backdrop-blur-xl rounded-xl`}>
          <nav>
             <div className="flex gap-[5px]">
                <button className="text-(--primary) text-sm font-normal">pages <span className="text-(--primary) text-sm font-normal">/</span> {current ? current.name : "not working"}</button>

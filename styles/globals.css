@@ -63,11 +63,11 @@ button {
    @apply cursor-pointer
 }
 
-section:not(#hero, #lessons, #trendingCards, #recentlyCards, #discover ) {
+section:not(#hero, #lessons, #trendingCards, #recentlyCards, #discover, #signIn ) {
    @apply bg-white px-5 py-4
 }
 
-section {
+section:not(#signIn) {
    @apply rounded-[20px] font-bold tracking-[-0.02rem] text-(--primary)
 }
 
