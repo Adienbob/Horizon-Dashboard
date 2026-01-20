@@ -4,7 +4,7 @@ import Card from "./cards";
 export default function TrendingCards() {
 
    return (
-      <section id="trendingCards">
+      <section className="md:col-span-2" id="trendingCards">
          <nav className="grid mx-5 gap-5">
             <h2 className="flex-1 text-2xl">Trending NFTs</h2>
             <ul className="flex justify-between mb-5 text-(--primary-blue)">
@@ -22,7 +22,7 @@ export default function TrendingCards() {
                </li>
             </ul>
          </nav>
-         <div className="grid gap-5">
+         <div className="grid gap-5 md:grid-cols-3">
             <Card 
                img={{
                   src: "/assets/marketplace/Cards/Abstract.jpg",

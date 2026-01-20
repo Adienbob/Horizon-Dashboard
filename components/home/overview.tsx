@@ -28,9 +28,9 @@ function OverviewCard({ title, value, icon, className, growth, period}: StatCard
             height={icon.height} 
          /> : ""}
          <div className={`${className === "sales" ? "ml-[23px]" : ""}`}>
-            <p className="text-(--secondary) text-sm">{title}</p>
-            <p className="text-(--primary) text-2xl font-bold">{value}</p>
-            {growth ? <p className="text-(--secondary)"><span className="text-(--growth) font-bold">{growth} </span>{period}</p> : "" }
+            <p className="text-(--secondary) text-sm font-medium">{title}</p>
+            <span className="text-(--primary) text-2xl font-bold">{value}</span>
+            {growth ? <p className="text-(--secondary) font-medium"><span className="text-(--growth) font-bold">{growth} </span>{period}</p> : "" }
          </div>
       </div>
    )
@@ -39,7 +39,7 @@ function OverviewCard({ title, value, icon, className, growth, period}: StatCard
 export default function DashboardOverview() {
    
    return (
-      <section className="grid gap-5" id="hero">
+      <section className="grid gap-5 md:grid-cols-2 md:col-span-2" id="hero">
          <h1 id="sr-only">Overview</h1>
          <OverviewCard 
             icon={{

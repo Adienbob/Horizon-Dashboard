@@ -53,7 +53,8 @@ export default function StackedBarChart() {
    };
 
    return (
-      <section className="revenue">
+      <section>
+         
          <div className="head">
             <h2>Weekly Revenue</h2>
             <IconButton src="../assets/global/Buttons/bar_chart.svg" width={24} height={24} alt="more icon"  />

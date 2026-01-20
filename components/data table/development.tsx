@@ -26,7 +26,7 @@ export default function Development({headers, data}: PropsTypes) {
       }
    }
    return (
-      <section id="table">
+      <section className="md:col-span-2" id="table">
          <div className="head">
             <h2>Development Table</h2>
             <MoreButton />
@@ -46,23 +46,27 @@ export default function Development({headers, data}: PropsTypes) {
                {sortedData.map((row, rowIndex) => (
                   <tr key={`row-${rowIndex}`}>
                      {row.map((cell, cellIndex) => (
-                        <td key={cellIndex}>{
-                           Array.isArray(cell) 
-                           ? cell.map((osType, osIndex) => (
-                              osType === "apple" 
-                              ?  <Image key={`os-${osIndex}`} src={"../assets/data tables/icons/Apple_logo_black 1.svg"} alt="" width={15} height={18} />
-                              : osType.toLowerCase() === "android"
-                              ?  <Image key={`os-${osIndex}`} src={"../assets/data tables/icons/android-seeklogo.com 1.svg"} alt="" width={16} height={18} />
-                              : osType.toLowerCase() === "windows"
-                              ?  <Image key={`os-${osIndex}`} src={"../assets/data tables/icons/Windows_logo_-_2012 1.svg"} alt="" width={19} height={18} />
-                              : ""
-                           ))
-                        : cellIndex === 3 
-                        ?  (
-                           <p>{cell}% <HoriChart data={cell} label="revenue" /></p>
-                        )
-                        : cell
-                     }</td>
+                        <td key={cellIndex}>
+                           <div className={cellIndex === 1 ? "flex gap-2" : ""}>
+                              {
+                                 Array.isArray(cell) 
+                                 ? cell.map((osType, osIndex) => (
+                                    osType === "apple" 
+                                    ?  <Image key={`os-${osIndex}`} src={"../assets/data tables/icons/Apple_logo_black 1.svg"} alt="" width={15} height={18} />
+                                    : osType.toLowerCase() === "android"
+                                    ?  <Image key={`os-${osIndex}`} src={"../assets/data tables/icons/android-seeklogo.com 1.svg"} alt="" width={16} height={18} />
+                                    : osType.toLowerCase() === "windows"
+                                    ?  <Image key={`os-${osIndex}`} src={"../assets/data tables/icons/Windows_logo_-_2012 1.svg"} alt="" width={19} height={18} />
+                                    : ""
+                                 ))
+                              : cellIndex === 3 
+                              ?  (
+                                 <p>{cell}% <HoriChart data={cell} label="revenue" /></p>
+                              )
+                              : cell
+                              }
+                           </div>
+                        </td>
                      ))}
                   </tr>
                ))}

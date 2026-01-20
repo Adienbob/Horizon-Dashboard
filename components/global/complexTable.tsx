@@ -13,7 +13,7 @@ export default function ComplexTable({headers, data}: Data) {
    
 
    return (
-      <section id="table">
+      <section className="md:col-span-2" id="table">
          <div className="head">
             <h2>Complex Table</h2>
             <MoreButton />

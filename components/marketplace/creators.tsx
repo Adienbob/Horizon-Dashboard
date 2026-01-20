@@ -13,14 +13,14 @@ export default function Creators({details, avatars}: CreatorTypes) {
    
    return (
 
-      <section className="leading-6 mb-5" id="table">
+      <section className="leading-6 mb-5 md:col-span-2" id="table">
          <div className="flex justify-between mb-5">
             <h2 className="leading-9 text-[20px]">
                Top Creators
             </h2>
             <button className="text-(--primary-blue) rounded-full font-normal px-5 hover:bg-(--btn-hover) bg-(--main-bg) leading-6 py-1.5">See all</button>
          </div>
-         <table>
+         <table className="">
             <thead>
                <tr>
                   {["NAME", "ARTWORKS", "RATING"].map((title, index) => (

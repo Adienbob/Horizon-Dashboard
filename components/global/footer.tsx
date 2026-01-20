@@ -3,7 +3,7 @@
 export default function Footer() {
 
    return (
-      <footer className="text-(--secondary) text-sm text-center">
+      <footer className="text-(--secondary) text-sm text-center md:col-span-2">
          <p>© 2022 Horizon UI. All Rights Reserved.</p>
          <nav>
             <ul className="flex justify-evenly mt-2.5">

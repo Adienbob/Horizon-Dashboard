@@ -11,6 +11,7 @@ import Traffic from "@/components/home/traffic";
 import StackedChart from "@/components/home/revenue";
 import TotalSpent from "@/components/home/totalSpent";
 import DashboardOverview from "../../components/home/overview";
+import PieChart from "@/components/home/pieChart";
 
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
             className={["horizon-pro", "horizon-free", "weekly-update, venus-asset", "marketplace"]}
          />
          <Traffic />
+         <PieChart />
          <ComplexTable 
             headers={["NAME", "STATUS", "DATE", "PROGRESS"]}
             data={[

@@ -65,7 +65,7 @@ export default function TotalSpent() {
       }
    
    return (
-      <section className="TotalSpentChart">
+      <section>
          <div className="head">
             <h2 className="sr-only">TotalSpent</h2>
             <button className="flex items-center">
@@ -80,24 +80,26 @@ export default function TotalSpent() {
             </button>
             <IconButton src="../assets/global/Buttons/bar_chart.svg" width={24} height={24} alt="more icon" />
          </div>
-         <div className="flex">
-            <div className="">
-               <strong className="text-(--primary) text-[34px] tracking-[-0.02em] leading-[42px] mt-5 block">$37.5K</strong>
-               <p className="text-(--secondary) text-sm flex text-nowrap mb-6 font-medium">Total Spent 
-                  <span className="text-(--growth) text-sm font-bold flex items-center pl-2">
-                     <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clipPath="url(#clip0_201_2539)">
-                           <path d="M5.86963 10.4697L10.0622 6.7305L14.2547 10.4697H5.86963Z" fill="#05CD99"/>
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_201_2539">
-                              <rect width="20.1242" height="17.948" fill="white"/>
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     +2.45%
-                  </span>
-               </p>
+         <div className="flex md:grid">
+            <div className="md:flex md:justify-between">
+               <div>
+                  <strong className="text-(--primary) text-[34px] tracking-[-0.02em] leading-[42px] mt-5 block">$37.5K</strong>
+                  <p className="text-(--secondary) text-sm flex text-nowrap mb-6 font-medium">Total Spent 
+                     <span className="text-(--growth) text-sm font-bold flex items-center pl-2">
+                        <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g clipPath="url(#clip0_201_2539)">
+                              <path d="M5.86963 10.4697L10.0622 6.7305L14.2547 10.4697H5.86963Z" fill="#05CD99"/>
+                           </g>
+                           <defs>
+                              <clipPath id="clip0_201_2539">
+                                 <rect width="20.1242" height="17.948" fill="white"/>
+                              </clipPath>
+                           </defs>
+                        </svg>
+                        +2.45%
+                     </span>
+                  </p>
+               </div>
                <p className="text-(--growth) tracking-[-0.02em] font-bold flex items-center gap-1.5"> 
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="16" height="16" rx="8" fill="#05CD99"/>

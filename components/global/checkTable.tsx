@@ -11,7 +11,7 @@ export default function CheckTable({headers, data, input, className}: Data) {
    const { sortedData, handleSort, setIsSorted } = useSort(data)
 
    return (
-      <section id="table">
+      <section className="md:col-span-2" id="table">
          <div className="head">
             <h2>Check Table</h2>
             <MoreButton />
