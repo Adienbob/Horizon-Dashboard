@@ -68,9 +68,9 @@ export default function ArticleCard({article}: ArticleType) {
                </div>
                : ""
             }
-            <p className="text-(--secondary) font-normal leading-[26px]">{article.content}</p>
+            <p className="text-(--secondary) font-normal leading-[26px] md:mt-5">{article.content}</p>
          </div>
-         <div className="flex mt-[29px] justify-between">
+         <div className="flex mt-[29px] justify-between bottom-0">
             {article.avatars?
             <Image 
                src={article.avatars}

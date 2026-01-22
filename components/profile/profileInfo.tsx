@@ -4,16 +4,15 @@ export default function ProfileInfo() {
 
    return (
 
-      <section className="[&_p]:text-(--secondary) [&_p]:text-sm flex flex-col items-center gap-[56px]">
+      <section className="[&_p]:text-(--secondary) [&_p]:text-sm flex flex-col items-center gap-14 md:col-span-2">
          <h2 className="sr-only">Profile Informations</h2>
-         <div className="relative">
+         <div className="relative w-full h-32">
             <Image 
                src={"/assets/profile/images/Background.jpg"}
                alt=""
-               width={518}
-               height={131}
+               fill
                quality={80}
-               className="background"
+               className="background object-cover rounded-2xl"
             />
             <Image 
                src={"../assets/profile/icons/Avatar.svg"}

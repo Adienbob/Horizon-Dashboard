@@ -37,7 +37,7 @@ export default function Columns({className, columnHeader, articles}: KanbanData)
    }
 
    return (
-      <section id={className} className="">
+      <section id={className}>
          <div className="head">
             <h2 className="text-[32px]">{columnHeader}</h2>
             <button onClick={() => setIsAddArticleOpen(prev => !prev)}>

@@ -15,7 +15,7 @@ export default function ClientLayout({
    console.log(current)
    return (
       <main>
-         <div className={`${current === "/sign" ? "bg-white" : "bg-(--main-bg)"} grid grid-cols-1 md:grid-cols-2 gap-5 px-5 pb-8 relative`} id="pageContainer">
+         <div className={`grid grid-cols-1 gap-5 px-5 pb-8 relative ${current === "/sign" ? "bg-white md:grid-cols-1" : "bg-(--main-bg) md:grid-cols-2"}`} id="pageContainer">
             {/* Sidebar Overlay */}
             <div onClick={() => setIsOpen(prev => !prev)} className={`
                fixed inset-0 z-40 bg-black/40 *:

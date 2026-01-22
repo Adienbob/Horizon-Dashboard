@@ -16,10 +16,10 @@ function Content({title, value}: Info) {
 export default function GeneralInfo() {
 
    return (
-      <section>
+      <section className="md:col-span-2">
          <h2 className="text-[20px] mb-2.5">General Information</h2>
          <p className="text-(--secondary) font-normal leading-[26px]">As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...</p>
-         <div className="grid gap-5 mt-6">
+         <div className="grid gap-5 mt-6 md:grid-cols-2">
             <Content 
                title="Education"
                value="Stanford University"

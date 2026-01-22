@@ -17,7 +17,7 @@ export default function Form() {
    const [showPassword, setShowPassword] = useState<boolean>(false)
 
    return (
-      <section id="signIn" className="bg-white text-(--primary) text-sm relative">
+      <section id="signIn" className="bg-white text-(--primary) text-sm relative md:px-20">
          <button className="p-5 rounded-full fixed bottom-[30px] right-[30px] border border-[#6A53FF]" style={{ background: "linear-gradient(90deg, #868CFF 0%, #4318FF 100%)" }}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                <g clipPath="url(#clip0_101_9074)">
