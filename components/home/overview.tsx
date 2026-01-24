@@ -39,7 +39,7 @@ function OverviewCard({ title, value, icon, className, growth, period}: StatCard
 export default function DashboardOverview() {
    
    return (
-      <section className="grid gap-5 md:grid-cols-2 md:col-span-2" id="hero">
+      <section className="grid gap-5 md:grid-cols-2 md:col-span-2 lg:grid-cols-3" id="hero">
          <h1 id="sr-only">Overview</h1>
          <OverviewCard 
             icon={{

@@ -7,10 +7,8 @@ export default function Discover() {
          <Image 
             src={"/assets/marketplace/Discover/Background Image.jpg"}
             alt=""
-            width={800}
-            height={800}
-            className="object-cover object-center absolute z-10 h-full w-ful
-            l rounded-[20px]"
+            fill
+            className="object-cover object-center absolute z-10 h-full w-full rounded-[20px]"
          />
          <div className="text-(--component-bg) relative z-20 top-[50%] translate-y-[-50%] left-10 pr-45">
             <h1>

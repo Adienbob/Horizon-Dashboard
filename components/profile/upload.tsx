@@ -4,7 +4,7 @@ import PrimaryButton from "../buttons/primaryButtons";
 export default function UploadFiles() {
 
    return (
-      <section className="flex flex-col items-center">
+      <section className="flex flex-col items-center lg:col-span-5">
          <h2 className="sr-only">Complete Your Profile</h2>
          <label htmlFor="file-upload" className="flex flex-col items-center bg-(--lessons-btns-bg) border-dashed border-2 border-(--toggle-off) w-full py-5 rounded-[13px] mb-5">
             <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">

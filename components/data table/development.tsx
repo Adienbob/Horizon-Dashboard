@@ -33,7 +33,7 @@ export default function Development({headers, data}: PropsTypes) {
          </div>
          <table>
             <thead>
-               <tr>
+               <tr className="[&_button]:font-medium">
                   {headers.map((head, index) => (
                      <th key={index} onClick={() => {
                         handleSort(index)

@@ -45,10 +45,10 @@ export default function Projects() {
 
    return (
       
-      <section className="all-projects shadow-[14px_17px_40px_4px_rgba(112,144,176,0.08)] md:col-span-2">
+      <section className="all-projects shadow-[14px_17px_40px_4px_rgba(112,144,176,0.08)] md:col-span-2 lg:col-span-6">
          <h2 className="text-[20px]">All Projects</h2>
          <p className="text-(--secondary) font-normal leading-[26px]">Here you can find more details about your projects. Keep you user engaged by providing meaningful information.</p>
-         <div className="grid gap-5 md:grid-cols-2">
+         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
             <Project 
                head="Technology behind the Blockchain"
                rank={1}

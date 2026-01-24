@@ -14,7 +14,7 @@ export default function Marketplace() {
          <Discover />
          <TrendingCards />
          <RecentlyCards />
-         <aside className="md:col-span-2 md:grid">
+         <aside className="md:col-span-2 md:grid grid-cols-2 lg:gap-5">
             <Creators 
                details={[
                   ["@maddison_c21", "9821", "98"],

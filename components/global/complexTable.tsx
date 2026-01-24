@@ -21,7 +21,7 @@ export default function ComplexTable({headers, data}: Data) {
          <div className="body">
             <table>
                <thead>
-                  <tr>
+                  <tr className="[&_button]:font-medium">
                      {headers.map((title, index) => (
                      <th key={index} onClick={() => {
                         handleSort(index, title.toLowerCase())

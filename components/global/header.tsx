@@ -50,7 +50,7 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
       }
    }
    return (
-      <header className={`${current?.path === "/sign" ? "hidden" : ""} sticky top-2 z-30 bg-white/10 p-2 backdrop-blur-xl rounded-xl md:col-span-2`}>
+      <header className={`${current?.path === "/sign" ? "hidden" : ""} sticky top-2 z-30 bg-white/10 p-2 md:p-3 backdrop-blur-xl rounded-xl md:col-span-full`}>
          <nav className="md:grid md:grid-cols-2">
             <div>
                <div className="flex gap-[5px]">
@@ -58,14 +58,14 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
                </div>
                <h1 className="text-(--primary) text-[30px] font-bold">{current?.name}</h1>
             </div>
-            <div className="flex items-center gap-10 justify-between bg-(--component-bg) px-5 py-[7.5px] rounded-[30px] md:gap-2 md:px-2">
+            <div className="flex items-center gap-10 justify-between bg-(--component-bg) px-5 py-[7.5px] rounded-[30px] md:gap-2 md:px-2 lg:gap-10">
                <div>
                   <label htmlFor="searchBar" className="bg-(--main-bg) flex items-center px-4 py-3 rounded-[30px] w-fit">
                      <svg width="15" height="15" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <circle cx="5" cy="5" r="4.3" stroke="#2B3674" strokeWidth="1.4"/>
                      <line x1="10.0101" y1="11" x2="8" y2="8.98995" stroke="#2B3674" strokeWidth="1.4" strokeLinecap="round"/>
                      </svg>
-                     <input className="text-base placeholder:text-sm placeholder:text-(--gray-400) placeholder:font-medium w-35 ml-2 text-(--extensions) md:w-30" type="search" id="searchBar" placeholder="Search..." />
+                     <input className="text-base placeholder:text-sm placeholder:text-(--gray-400) placeholder:font-medium w-35 ml-2 text-(--extensions) md:w-30 lg:w-40" type="search" id="searchBar" placeholder="Search..." />
                   </label>
                </div>
                <ul className="flex items-center w-full justify-between">

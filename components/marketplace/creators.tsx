@@ -13,7 +13,7 @@ export default function Creators({details, avatars}: CreatorTypes) {
    
    return (
 
-      <section className="leading-6 mb-5 md:col-span-2" id="table">
+      <section className="leading-6 mb-5 md:col-span-2 lg:col-span-1 lg:h-full" id="table">
          <div className="flex justify-between mb-5">
             <h2 className="leading-9 text-[20px]">
                Top Creators

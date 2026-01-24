@@ -19,7 +19,7 @@ export default function CheckTable({headers, data, input, className}: Data) {
          <div className="body">
             <table>
                <thead>
-                  <tr>
+                  <tr className="[&_button]:font-medium">
                      {headers?.map((name, index) => (
                         <th key={index} onClick={() => {
                            handleSort(index, name.toLowerCase(), true)
