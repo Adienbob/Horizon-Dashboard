@@ -15,7 +15,7 @@ export default function ClientLayout({
    console.log(current)
    return (
       <main>
-         <div className={`grid grid-cols-1 gap-5 px-5 lg:px-7.5 pb-8 relative ${current === "/sign" ? "bg-white flex md:grid-cols-1 lg:grid-cols-2 lg:pr-0" : "bg-(--main-bg) md:grid-cols-2"} ${current === "/profile" ? "lg:grid-cols-12" : ""}`} id="pageContainer">
+         <div className={`grid grid-cols-1 gap-5 px-5 lg:px-7.5 pb-8 relative ${current === "/sign" ? "bg-white flex md:grid-cols-1 lg:grid-cols-2 lg:pr-0 lg:pb-0" : "bg-(--main-bg) md:grid-cols-2"} ${current === "/profile" ? "lg:grid-cols-12" : ""}`} id="pageContainer">
             {/* Sidebar Overlay */}
             <div onClick={() => setIsOpen(prev => !prev)} className={`
                fixed inset-0 z-40 bg-black/40 *:

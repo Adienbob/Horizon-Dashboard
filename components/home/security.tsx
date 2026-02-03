@@ -18,7 +18,7 @@ export default function SecurityCards() {
             <span className="block text-2xl mr-10 pl-2.5 py-[17px]">Control card security in-app with a tap</span>
             <p className="text-(--secondary) font-medium text-[14px] pl-2.5 pb-[35px]">Discover our cards benefits, with one tap</p>
             <div className="text-center">
-               <PrimaryButton text="Cards" weight="normal"/>
+               <PrimaryButton background="bg-(--primary-blue)" className="rounded-2xl py-[11px]" text="Cards" weight="normal"/>
             </div>
          </div>
       </section>

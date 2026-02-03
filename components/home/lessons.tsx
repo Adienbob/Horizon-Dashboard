@@ -47,7 +47,7 @@ export default function Lessons() {
                         width={109.5}
                         height={34}
                      />
-                     <PrimaryButton text="Get Started"/>
+                     <PrimaryButton background="bg-(--primary-blue)" className="rounded-2xl py-[8px]" text="Get Started"/>
                   </div>
                </div>
             </div>

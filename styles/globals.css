@@ -76,7 +76,7 @@ section .head {
 }
 
 section .head h2, h3, h4, h5, h6 {
-   @apply text-(--primary) font-bold text-[18px]
+   @apply text-(--primary) font-bold text-[18px] lg:text-[22px] 
 }
 
 section .head button {
@@ -84,15 +84,18 @@ section .head button {
 }
 
 /* tables base styles */
+#table {
+   @apply lg:col-span-1
+}
 
 #table table {
    @apply w-full table-fixed border-collapse text-left text-[14px]
 }
 
 #table thead th {
-   @apply text-(--secondary) text-[12px] font-bold border-b border-(--border) pb-2.5
+   @apply text-(--secondary) text-[12px] lg:text-base font-bold border-b border-(--border) pb-2.5
 }
 
 #table tbody td {
-   @apply text-(--primary) font-bold py-2
+   @apply text-(--primary) font-bold py-2 lg:text-base
 }

@@ -2,7 +2,7 @@
 type Buttons = {
    text: string;
    className?: string;
-   background?: "bg-(--bid)" | "bg-(--error)" | "bg-(--pending)" | "bg-(--update)" | "bg-(--done)" | "bg-(--primary-blue)";
+   background: "bg-(--bid)" | "bg-(--error)" | "bg-(--pending)" | "bg-(--update)" | "bg-(--done)" | "bg-(--primary-blue)";
    weight?: "medium" | "normal";
    black?: true;
 }
