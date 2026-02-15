@@ -25,6 +25,12 @@ export default function SideBar({ isOpen, setIsOpen }: SidebarState) {
          bg-white
          transform transition-transform duration-300 ease-out
          ${isOpen ? "translate-x-0" : "-translate-x-full"}
+         2xl:relative
+         2xl:col-span-1
+         2xl:h-150
+         2xl:translate-x-0
+         2xl:rounded-br-[20px]
+         ${pathname === "/sign" ? "hidden" : ""}
          `}>
          <div className="border-b border-(--main-bg)" id="header">
             <h2 className="py-7.5 text-[26px] font-medium text-center text-(--primary) ">

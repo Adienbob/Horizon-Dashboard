@@ -11,7 +11,7 @@ export default function Columns({headers, data}: PropsData) {
 
    
    return (
-      <section className="md:col-span-2" id="table">
+      <section className="md:col-span-2 2xl:col-span-3" id="table">
          <div className="head">
             <h2>4-Column Table</h2>
             <MoreButton />

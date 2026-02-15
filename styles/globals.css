@@ -84,10 +84,6 @@ section .head button {
 }
 
 /* tables base styles */
-#table {
-   @apply lg:col-span-1
-}
-
 #table table {
    @apply w-full table-fixed border-collapse text-left text-[14px]
 }

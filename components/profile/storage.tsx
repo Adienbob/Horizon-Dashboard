@@ -6,7 +6,7 @@ import HoriChart from "../global/horizontalChart";
 export default function Storage() {
 
    return (
-      <section className="lg:col-span-3">
+      <section className="lg:col-span-2 2xl:w-[25%]">
          <h2 className="sr-only">Storage</h2>
          <MoreHorizBtn />
          <div className="flex flex-col items-center mb-10">

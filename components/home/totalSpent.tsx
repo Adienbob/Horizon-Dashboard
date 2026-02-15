@@ -65,7 +65,7 @@ export default function TotalSpent() {
       }
    
    return (
-      <section>
+      <section className="2xl:col-span-6">
          <div className="head">
             <h2 className="sr-only">TotalSpent</h2>
             <button className="flex items-center">

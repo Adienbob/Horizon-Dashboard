@@ -3,7 +3,7 @@
 export default function Footer() {
 
    return (
-      <footer className="text-(--secondary) text-sm text-center md:col-span-full lg:flex lg:justify-between lg:items-center lg:px-20 lg:mt-5 lg:absolute lg:bottom-10 lg:w-[97.5%] lg:z-50">
+      <footer className="text-(--secondary) text-sm text-center md:col-span-full lg:flex lg:justify-between lg:items-center lg:px-20 lg:mt-5">
          <p>© 2022 Horizon UI. All Rights Reserved.</p>
          <nav>
             <ul className="flex lg:gap-8 justify-evenly">

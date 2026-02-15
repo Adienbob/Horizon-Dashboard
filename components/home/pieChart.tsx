@@ -42,7 +42,7 @@ export default function PieChart() {
    };
 
    return (
-      <section className="pieChart">
+      <section className="2xl:col-span-3">
          <div className="head">
             <h2>Your Pie Chart</h2>
             <select name="period" id="period">

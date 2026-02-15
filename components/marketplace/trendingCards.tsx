@@ -4,7 +4,7 @@ import Card from "./cards";
 export default function TrendingCards() {
 
    return (
-      <section className="md:col-span-2" id="trendingCards">
+      <section className="md:col-span-2 2xl:col-span-4" id="trendingCards">
          <nav className="grid mx-5 gap-5 lg:flex">
             <h2 className="flex-1 text-2xl">Trending NFTs</h2>
             <ul className="flex justify-between mb-5 text-(--primary-blue) lg:w-1/2">

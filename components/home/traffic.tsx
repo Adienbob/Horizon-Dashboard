@@ -77,7 +77,7 @@ export default function Traffic() {
    };
 
    return (
-   <section className="dailyTraffic">
+   <section className="2xl:col-span-3">
          <h2 className="sr-only">Daily Traffic</h2>
          <div className="head">
             <p className="text-(--secondary) text-[14px] font-medium">Daily Traffic<strong className="text-(--primary) text-[34px] block">2.579 <span className="text-(--secondary) text-[14px] font-medium">visitors</span></strong></p>

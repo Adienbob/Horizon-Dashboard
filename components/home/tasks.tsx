@@ -11,7 +11,7 @@ type Taskstypes = {
 export default function Tasks({tasksNames, isChecked, taskId}: Taskstypes) {
 
    return (
-      <section className="tasks z-1">
+      <section className="tasks z-1 2xl:col-span-3">
          <div className="head">
             <h2 className="flex items-center justify-start gap-4">
                <div className="relative 

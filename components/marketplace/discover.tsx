@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Discover() {
 
    return (
-      <section id="discover" className="relative z-0 rounded-[20px] h-[275px] md:col-span-2">
+      <section id="discover" className="relative z-0 rounded-[20px] h-[275px] md:col-span-2 2xl:col-span-4">
          <Image 
             src={"/assets/marketplace/Discover/Background Image.jpg"}
             alt=""

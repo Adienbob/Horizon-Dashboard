@@ -58,7 +58,7 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
                </div>
                <h1 className="text-(--primary) text-[30px] font-bold">{current?.name}</h1>
             </div>
-            <div className="flex items-center gap-10 justify-between bg-(--component-bg) px-5 py-[7.5px] rounded-[30px] md:gap-2 md:px-2 lg:gap-10">
+            <div className="flex items-center gap-10 justify-between bg-(--component-bg) px-5 py-[7.5px] rounded-[30px] md:gap-2 md:px-2 lg:gap-10 2xl:gap-5 2xl:w-[80%] 2xl:ml-auto">
                <div>
                   <label htmlFor="searchBar" className="bg-(--main-bg) flex items-center px-4 py-3 rounded-[30px] w-fit">
                      <svg width="15" height="15" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +69,7 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
                   </label>
                </div>
                <ul className="flex items-center w-full justify-between">
-                  <li className="flex items-center">
+                  <li className="flex items-center 2xl:hidden">
                      <button onClick={() => setIsOpen(!isOpen)}>
                            <svg stroke="#A3AED0" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1.25rem" width="1.25rem" xmlns="http://www.w3.org/2000/svg"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
                      </button>

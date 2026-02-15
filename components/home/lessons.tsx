@@ -3,7 +3,7 @@ import PrimaryButton from "../buttons/primaryButtons";
 
 export default function Lessons() {
    return (
-      <section className="rounded-[20px] bg-white lessons text-(--primary) tracking-[-0.02rem] font-bold" id="lessons">
+      <section className="rounded-[20px] bg-white lessons text-(--primary) tracking-[-0.02rem] font-bold 2xl:col-span-3" id="lessons">
             <h2 className="sr-only">New Lessons</h2>
             <div className="flex items-center gap-3 px-6 pt-4">
                <Image 
@@ -47,7 +47,7 @@ export default function Lessons() {
                         width={109.5}
                         height={34}
                      />
-                     <PrimaryButton background="bg-(--primary-blue)" className="rounded-2xl py-[8px]" text="Get Started"/>
+                     <PrimaryButton background="bg-(--primary-blue)" className="rounded-2xl py-2" text="Get Started"/>
                   </div>
                </div>
             </div>

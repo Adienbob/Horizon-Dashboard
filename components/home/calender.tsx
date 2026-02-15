@@ -24,7 +24,7 @@ export default function CustomCalendar() {
    ];
 
    return (
-   <section className="Calender">
+   <section className="2xl:col-span-3">
          <h2 className="sr-only">Calender</h2>
          <DayPicker
             mode="range"

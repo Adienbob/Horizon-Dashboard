@@ -5,7 +5,7 @@ import  SwitchBtn from "../buttons/toggle";
 export default function Notifications() {
 
    return (
-      <section className="md:col-span-2 lg:col-span-full">
+      <section className="md:col-span-2 lg:col-span-full 2xl:w-[32.5%]">
          <div className="head">
             <h2 className="text-2xl">Notifications</h2>
             <IconButton src="../assets/global/Buttons/more_horiz.svg" width={24} height={24} alt="more icon"  />

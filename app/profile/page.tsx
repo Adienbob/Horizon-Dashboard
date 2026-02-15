@@ -11,12 +11,16 @@ export default function Profile() {
 
    return (
       <>
+      <div className="col-span-full flex gap-5">
          <ProfileInfo />
          <Storage />
          <UploadFiles />
+      </div>
+      <div className="col-span-full flex gap-5">
          <Projects />
          <GeneralInfo />
          <Notifications />
+      </div>
       </>
    )
 }
