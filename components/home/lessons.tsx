@@ -3,7 +3,7 @@ import PrimaryButton from "../buttons/primaryButtons";
 
 export default function Lessons() {
    return (
-      <section className="rounded-[20px] bg-white lessons text-(--primary) tracking-[-0.02rem] font-bold 2xl:col-span-3" id="lessons">
+      <section className="rounded-[20px] bg-white lessons text-(--primary) tracking-[-0.02rem] font-bold 2xl:col-span-4 2xl:grid" id="lessons">
             <h2 className="sr-only">New Lessons</h2>
             <div className="flex items-center gap-3 px-6 pt-4">
                <Image 
@@ -17,7 +17,7 @@ export default function Lessons() {
                   <span className="text-[16px] leading-7">New lession is available</span>
                </div>
             </div>
-            <div className="body">
+            <div className="body 2xl:grid">
                <span className="text-xl leading-8 mt-[38px] block px-6 mb-[29px] mr-20">What do you need to know to create better products?</span>
                <div className="bg-(--lessons-btns-bg) px-6 pb-4 rounded-[20px] rounded-t-none pt-4">
                   <div className="flex justify-between leading-6 text-[14px] mb-9">
@@ -40,7 +40,7 @@ export default function Lessons() {
                         Video format
                      </span>
                   </div>
-                  <div className="grid gap-5">
+                  <div className="grid gap-5 2xl:flex">
                      <Image 
                         src={"../assets/home/lessons/avatars.svg"}
                         alt=""

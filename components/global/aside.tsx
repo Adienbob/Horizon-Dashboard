@@ -9,10 +9,10 @@ type SidebarState = {
 const links = [
    { name: "Dashboard", href: "/" },
    { name: "NFT Markets", href: "/marketplace" },
+   { name: "Tables", href: "/tables" },
    { name: "Kanban", href: "/kanban" },
    { name: "Profile", href: "/profile" },
    { name: "Sign In", href: "/sign" },
-   { name: "Tables", href: "/tables" },
 ]
 
 export default function SideBar({ isOpen, setIsOpen }: SidebarState) {
@@ -57,7 +57,7 @@ export default function SideBar({ isOpen, setIsOpen }: SidebarState) {
                      {links[0].name}
                   </Link>
                </li>
-               <li>
+               <li className={`${pathname === links[1].href ? "text-(--primary) font-bold [&_div]:text-(--primary-blue)" : ""}`}>
                   <div className=" ">
                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_201_2909)">
@@ -74,7 +74,7 @@ export default function SideBar({ isOpen, setIsOpen }: SidebarState) {
                      {links[1].name}
                   </Link>
                </li>
-               <li>
+               <li className={`${pathname === links[2].href ? "text-(--primary) font-bold [&_div]:text-(--primary-blue)" : ""}`}>
                   <div>
                      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_201_2906)">
@@ -91,7 +91,7 @@ export default function SideBar({ isOpen, setIsOpen }: SidebarState) {
                      {links[2].name}
                   </Link>
                </li>
-               <li>
+               <li className={`${pathname === links[3].href ? "text-(--primary) font-bold [&_div]:text-(--primary-blue)" : ""}`}>
                   <div>
                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_201_2903)">
@@ -108,7 +108,7 @@ export default function SideBar({ isOpen, setIsOpen }: SidebarState) {
                      {links[3].name}
                   </Link>
                </li>
-               <li>
+               <li className={`${pathname === links[4].href ? "text-(--primary) font-bold [&_div]:text-(--primary-blue)" : ""}`}>
                   <div>
                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_201_2900)">
@@ -125,7 +125,7 @@ export default function SideBar({ isOpen, setIsOpen }: SidebarState) {
                      {links[4].name}
                   </Link>
                </li>
-               <li>
+               <li className={`${pathname === links[5].href ? "text-(--primary) font-bold [&_div]:text-(--primary-blue)" : ""}`}>
                   <div>
                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_201_2895)">
@@ -145,7 +145,7 @@ export default function SideBar({ isOpen, setIsOpen }: SidebarState) {
             </ul>
          </nav>
 
-         <div className="mt-auto mb-5 rounded-xl bg-indigo-600 p-4 text-white">
+         <div className="mt-auto mb-5 rounded-xl bg-[linear-gradient(130deg,#868CFF_0%,#4318FF_100%)] p-4 text-white text-center">
             <span className="font-bold">Upgrade to PRO</span>
             <p className="text-sm">to get access to all features!</p>
             <p className="text-sm">Connect with Venus World!</p>

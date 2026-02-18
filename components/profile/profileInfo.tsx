@@ -4,7 +4,7 @@ export default function ProfileInfo() {
 
    return (
 
-      <section className="[&_p]:text-(--secondary) [&_p]:text-sm flex flex-col items-center gap-14 md:col-span-2 lg:col-span-4 2xl:w-[35%]">
+      <section className="[&_p]:text-(--secondary) [&_p]:text-sm flex flex-col items-center gap-14 md:col-span-2 lg:col-span-5 2xl:w-[35%]">
          <h2 className="sr-only">Profile Informations</h2>
          <div className="relative w-full h-32">
             <Image 

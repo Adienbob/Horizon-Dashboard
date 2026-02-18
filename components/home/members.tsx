@@ -30,7 +30,7 @@ function Member({name, title, avatar}: Details) {
 export default function TeamMembers() {
 
    return (
-      <section className="2xl:col-span-3">
+      <section className="2xl:col-span-4">
          <div className="head">
             <h2>Team Members</h2>
             <button>

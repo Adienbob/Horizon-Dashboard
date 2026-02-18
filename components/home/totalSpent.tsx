@@ -80,8 +80,8 @@ export default function TotalSpent() {
             </button>
             <IconButton src="../assets/global/Buttons/bar_chart.svg" width={24} height={24} alt="more icon" />
          </div>
-         <div className="flex md:grid">
-            <div className="md:flex md:justify-between">
+         <div className="flex md:grid 2xl:flex">
+            <div className="md:flex md:justify-between 2xl:grid h-fit">
                <div>
                   <strong className="text-(--primary) text-[34px] tracking-[-0.02em] leading-[42px] mt-5 block">$37.5K</strong>
                   <p className="text-(--secondary) text-sm flex text-nowrap mb-6 font-medium">Total Spent 

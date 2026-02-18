@@ -89,9 +89,9 @@ section .head button {
 }
 
 #table thead th {
-   @apply text-(--secondary) text-[12px] lg:text-base font-bold border-b border-(--border) pb-2.5
+   @apply text-(--secondary) text-[12px] lg:text-sm font-bold border-b border-(--border) pb-2.5
 }
 
 #table tbody td {
-   @apply text-(--primary) font-bold py-2 lg:text-base
+   @apply text-(--primary) font-bold py-2 lg:text-sm
 }

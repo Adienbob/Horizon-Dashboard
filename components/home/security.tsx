@@ -4,7 +4,7 @@ import PrimaryButton from "../buttons/primaryButtons";
 export default function SecurityCards() {
 
    return (
-      <section className="2xl:col-span-3">
+      <section className="2xl:col-span-4 grid">
          <h2 className="sr-only">Security cards</h2>
          <div>
             <Image 
