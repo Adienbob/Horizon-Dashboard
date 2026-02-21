@@ -22,8 +22,7 @@ export default function TotalSpent() {
       const areaOptions: ApexOptions = {
          chart: {
             type: "area",
-            height: "100%",
-            width: "100%",
+            height: 90,
             toolbar: { show: false },
             zoom: { enabled: false },
             selection: { enabled: false }

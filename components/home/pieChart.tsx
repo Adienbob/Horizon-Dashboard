@@ -42,8 +42,8 @@ export default function PieChart() {
    };
 
    return (
-      <section className="2xl:col-span-3">
-         <div className="head">
+      <section className="2xl:col-span-3 flex flex-col items-center">
+         <div className="head w-full">
             <h2>Your Pie Chart</h2>
             <select name="period" id="period">
                <option value="daily">Daily</option>
@@ -52,7 +52,7 @@ export default function PieChart() {
                <option value="yearly">Yearly</option>
             </select>
          </div>
-         <div className="body">
+         <div className="body w-[50%] flex justify-center">
             <Pie data={data} options={options} />
          </div>
       </section>

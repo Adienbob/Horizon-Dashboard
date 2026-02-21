@@ -24,9 +24,17 @@ export default function CustomCalendar() {
    ];
 
    return (
-   <section className="2xl:col-span-3">
+   <section className=" 2xl:col-span-3">
          <h2 className="sr-only">Calender</h2>
+         <div className="">
+
          <DayPicker
+         className="w-full"
+  classNames={{
+    months: "w-full",
+    month: "w-full",
+    day: "w-full",
+  }}
             mode="range"
             month={month}
             onMonthChange={setMonthState}
@@ -76,6 +84,7 @@ export default function CustomCalendar() {
             ),
             }}
          />
+         </div>
       </section>
    );
 }

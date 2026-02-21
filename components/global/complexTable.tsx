@@ -1,7 +1,7 @@
 import Image from "next/image"
-import HoriChart from "./horizontalChart";
-import MoreButton from "../buttons/moreHoriz";
 import useSort from "../hooks/useSort";
+import MoreButton from "../buttons/moreHoriz";
+import HoriChart from "./horizontalChart";
 
 
 type Data = {
@@ -54,7 +54,7 @@ export default function ComplexTable({headers, data}: Data) {
                                  cell
                                  )
                               ) : colIndex === 3 ? (
-                                 <HoriChart data={cell} label="revenue" />
+                                 <HoriChart progressPrecentage={cell} />
                               ) : cell}
                            </td>
                         ))}

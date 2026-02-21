@@ -24,12 +24,12 @@ export default function StackedBarChart() {
       {
          label: "PRODUCT A",
          data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
-         backgroundColor: "#4318FF",
+         backgroundColor: "#6AD2FF",
       },
       {
          label: "PRODUCT B",
          data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
-         backgroundColor: "#6AD2FF",
+         backgroundColor: "#4318FF",
       },
       {
          label: "PRODUCT C",
@@ -43,8 +43,8 @@ export default function StackedBarChart() {
    const options: ChartOptions<"bar"> = {
       responsive: true,
       plugins: {
-      legend: { position: "top" },
-      title: { display: true, text: "9 Bars with 3 Stacks Each" },
+      legend: { display: false },
+      title: { display: false },
       },
       scales: {
          x: { stacked: true, grid: { display: false }, border: {display: false} },

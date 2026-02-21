@@ -1,51 +1,13 @@
 
-import {
-   Chart as ChartJS,
-   CategoryScale,
-   LinearScale,
-   BarElement,
-   Title,
-   Tooltip,
-   Legend,
-   ChartOptions,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
-
-type ChartData = {
-   label?: string;
-   data: number | string;
+type HoriChartProps = {
+   progressPrecentage: string | number
 }
-
-export default function HoriChart({label, data}: ChartData) {
-
-   const barData = {
-      labels: [""],
-      datasets: [
-         {
-         label: label || "",
-         data: [data], 
-         backgroundColor: "#4318FF",
-         borderRadius: 10,
-         },
-      ],
-   }
-
-   const barOptions: ChartOptions<"bar"> = {
-      indexAxis: "y", 
-      responsive: true,
-      plugins: {
-         legend: { display: false },
-         title: { display: false },
-      },
-      scales: {
-         x: { display: false }, 
-         y: { display: false }, 
-      },
-   };
+export default function HoriChart({progressPrecentage}: HoriChartProps) {
 
    return (
-      <Bar data={barData} options={barOptions} />
+      <div className="h-2 w-[50%] rounded-full overflow-hidden bg-gray-200">
+         <div className={`h-full bg-(--primary-blue) rounded-full`} style={{width: `${progressPrecentage}%`}}></div>
+      </div>
    )
 }

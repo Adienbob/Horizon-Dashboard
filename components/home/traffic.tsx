@@ -95,7 +95,7 @@ export default function Traffic() {
                +2.45%
             </span>
          </div>
-         <div className="body">
+         <div className="body h-50">
             <Bar data={data} options={barOptions} />
          </div>
       </section>

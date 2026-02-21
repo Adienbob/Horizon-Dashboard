@@ -61,7 +61,7 @@ export default function Development({headers, data}: PropsTypes) {
                                  ))
                               : cellIndex === 3 
                               ?  (
-                                 <p>{cell}% <HoriChart data={cell} label="revenue" /></p>
+                                 <span>{cell}% <HoriChart progressPrecentage={cell} /></span>
                               )
                               : cell
                               }
