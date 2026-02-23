@@ -70,12 +70,12 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
                </div>
                <ul className="flex items-center w-full justify-between">
                   <li className="flex items-center 2xl:hidden">
-                     <button onClick={() => setIsOpen(!isOpen)}>
+                     <button aria-label="Toggle sidebar" aria-expanded={isOpen} aria-controls="sidebar" onClick={() => setIsOpen(!isOpen)}>
                            <svg stroke="#A3AED0" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1.25rem" width="1.25rem" xmlns="http://www.w3.org/2000/svg"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg>
                      </button>
                   </li>
                   <li className="flex items-center">
-                     <button onClick={() => togglePopup("noti")}>
+                     <button type="button" aria-label={isOpen ? "Close notifications" : "Open notifications"} aria-haspopup="menu" aria-expanded={isOpen} aria-controls="notifications-menu" onClick={() => togglePopup("noti")}>
                         <svg width="16" height="20" viewBox="0 0 16 20" fill="true" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.2901 15.29L14.0001 14V9C14.0001 5.93 12.3601 3.36 9.50005 2.68V2C9.50005 1.17 8.83005 0.5 8.00005 0.5C7.17005 0.5 6.50005 1.17 6.50005 2V2.68C3.63005 3.36 2.00005 5.92 2.00005 9V14L0.710051 15.29C0.0800515 15.92 0.520051 17 1.41005 17H14.5801C15.4801 17 15.9201 15.92 15.2901 15.29ZM12.0001 15H4.00005V9C4.00005 6.52 5.51005 4.5 8.00005 4.5C10.4901 4.5 12.0001 6.52 12.0001 9V15ZM8.00005 20C9.10005 20 10.0001 19.1 10.0001 18H6.00005C6.00005 19.1 6.89005 20 8.00005 20Z" fill="#A3AED0"/>
                         </svg>
@@ -86,7 +86,7 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
                      </div>
                   </li>
                   <li className="flex items-center">
-                     <button onClick={() => togglePopup("info")}>
+                     <button type="button" aria-label={isOpen ? "Close alert" : "Open alert"} aria-haspopup="menu" aria-expanded={isOpen} aria-controls="alert-menu" onClick={() => togglePopup("info")}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_201_2879)">
                         <path d="M11 7H13V9H11V7ZM12 17C12.55 17 13 16.55 13 16V12C13 11.45 12.55 11 12 11C11.45 11 11 11.45 11 12V16C11 16.55 11.45 17 12 17ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#A3AED0"/>
@@ -103,7 +103,7 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
                      </div>
                   </li>
                   <li className="flex items-center">
-                     <button onClick={() => toggleTheme()} className="h-[18px]">
+                     <button aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"} onClick={() => toggleTheme()} className="h-[18px]">
                         <svg display={theme === "light" ? "block" : "none"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_201_2097)">
                         <path d="M9.95703 18C12.733 18 15.2684 16.737 16.9481 14.6675C17.1966 14.3613 16.9256 13.9141 16.5416 13.9872C12.1751 14.8188 8.16522 11.4709 8.16522 7.06303C8.16522 4.52398 9.52444 2.18914 11.7335 0.931992C12.074 0.738211 11.9884 0.221941 11.6015 0.150469C11.059 0.0504468 10.5086 8.21369e-05 9.95703 0C4.98914 0 0.957031 4.02578 0.957031 9C0.957031 13.9679 4.98281 18 9.95703 18Z" fill="#A3AED0"/>
@@ -118,7 +118,7 @@ export default function Header({isOpen, setIsOpen}: SideBar) {
                      </button>
                   </li>
                   <li>
-                     <IconButton src="../assets/global/Buttons/avatar.svg" alt="Avatar" width={41} height={41} />
+                     <IconButton label="profile picture" src="../assets/global/Buttons/avatar.svg" alt="Avatar" width={41} height={41} />
                   </li>
                </ul>
             </div>

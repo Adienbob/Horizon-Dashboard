@@ -35,8 +35,13 @@ export default function CheckTable({headers, data, input, className}: Data) {
                            <td key={ColIndex}>
                               {input && ColIndex === 0 ? (
                                  <div className="flex items-center gap-1">
-                                    <input type="checkbox" aria-labelledby={className?.[index]} />
-                                    <span id={className?.[index]}>{cell}</span>
+                                    <input
+                                       type="checkbox"
+                                       id={`row-${index}`}
+                                    />
+                                    <label htmlFor={`row-${index}`}>
+                                       {cell}
+                                    </label>
                                  </div>
                               ) : (
                                  cell

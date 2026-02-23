@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MoreVertBtn from "../buttons/moreVert";
+import IconButton from "../buttons/iconButton";
 
 
 type Details = {
@@ -33,14 +34,7 @@ export default function TeamMembers() {
       <section className="2xl:col-span-4">
          <div className="head">
             <h2>Team Members</h2>
-            <button>
-               <Image 
-                  src={"../assets/home/team members/add_circle.svg"}
-                  alt=""
-                  width={24}
-                  height={24}
-               />
-            </button>
+            <IconButton label="Add more members" src="../assets/home/team members/add_circle.svg" alt="" width={24} height={24} />
          </div>
          <div className="grid gap-4">
             <Member name="Adela Parkson" title="Creative Director" avatar="../assets/home/team members/adela.svg" />

@@ -40,15 +40,15 @@ export default function ComplexTable({headers, data}: Data) {
                               {colIndex === 1 ? (
                                  cell.toLowerCase() === "approved" ? (
                                  <div className="flex gap-1.5">
-                                    <Image src={"../assets/global/complexTable/check_circle.svg"} alt={cell} width={20} height={20} /> {cell}
+                                    <Image src={"../assets/global/complexTable/check_circle.svg"} alt="" width={20} height={20} /> {cell}
                                  </div>
                                  ) : cell.toLowerCase() === "disable" ? (
                                  <div className="flex gap-1.5">
-                                    <Image src={"../assets/global/complexTable/cancel.svg"} alt={cell} width={20} height={20} /> {cell}
+                                    <Image src={"../assets/global/complexTable/cancel.svg"} alt="" width={20} height={20} /> {cell}
                                  </div>
                                  ) : cell.toLowerCase() === "error" ? (
                                  <div className="flex gap-1.5">
-                                    <Image src={"../assets/global/complexTable/error.svg"} alt={cell} width={20} height={20} /> {cell}
+                                    <Image src={"../assets/global/complexTable/error.svg"} alt="" width={20} height={20} /> {cell}
                                  </div>
                                  ) : (
                                  cell

@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 type IconDetails = {
+   label: string;
    src: string;
    width: number;
    height: number;
@@ -8,10 +9,10 @@ type IconDetails = {
    className?: string;
 }
 
-export default function IconButton({src, width, height, alt, className}: IconDetails) {
+export default function IconButton({label, src, width, height, alt, className}: IconDetails) {
 
    return (
-      <button className={className}>
+      <button aria-label={label} className={className}>
          <Image 
             src={src}
             alt={alt}

@@ -45,6 +45,9 @@ export default function PieChart() {
       <section className="2xl:col-span-3 flex flex-col items-center">
          <div className="head w-full">
             <h2>Your Pie Chart</h2>
+            <label htmlFor="period" className="mr-2">
+               Select period
+            </label>
             <select name="period" id="period">
                <option value="daily">Daily</option>
                <option value="weekly">Weekly</option>
