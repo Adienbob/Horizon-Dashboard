@@ -47,7 +47,7 @@ export default function Creators({details, avatars}: CreatorTypes) {
                            </td>
                         ) : detailIndex === 2 ? (
                            (
-                              <td key={detailIndex}><HoriChart label="" data={detail} /></td>
+                              <td key={detailIndex}><HoriChart progressPrecentage={detail} /></td>
                            )
                         ) : (
                            <td key={detailIndex} className="text-[14px] text-(--secondary) font-normal">{detail}</td>

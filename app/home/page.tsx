@@ -6,7 +6,6 @@ import Tasks from "@/components/home/tasks";
 import Lessons from "@/components/home/lessons";
 import TeamMembers from "@/components/home/members";
 import SecurityCards from "@/components/home/security";
-import Calendar from "@/components/home/calender";
 import Traffic from "@/components/home/traffic";
 import StackedChart from "@/components/home/revenue";
 import TotalSpent from "@/components/home/totalSpent";
@@ -70,7 +69,6 @@ export default function Home() {
                   "promotional-lp",
                ]} 
             />
-         <Calendar />
          <Lessons />
          <TeamMembers />
          <SecurityCards />

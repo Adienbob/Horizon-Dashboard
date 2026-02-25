@@ -77,9 +77,9 @@ export default function TotalSpent() {
                />
                <span className="text-(--secondary) text-sm font-medium">This month</span>
             </button>
-            <IconButton src="../assets/global/Buttons/bar_chart.svg" width={24} height={24} alt="more icon" />
+            <IconButton src="../assets/global/Buttons/bar_chart.svg" width={24} height={24} label="more icon" />
          </div>
-         <div className="flex md:grid 2xl:flex">
+         <div className="grid 2xl:flex">
             <div className="md:flex md:justify-between 2xl:grid h-fit">
                <div>
                   <strong className="text-(--primary) text-[34px] tracking-[-0.02em] leading-[42px] mt-5 block">$37.5K</strong>

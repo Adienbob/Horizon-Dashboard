@@ -28,7 +28,7 @@ export default function Storage() {
             <span className="total-space">50 Gb</span>
          </div>
          <div className="h-2.5 w-full bg-(--border) rounded-[42px]">
-            <HoriChart data={25.6} />
+            <HoriChart progressPrecentage={25.6} />
          </div>
       </section>
    )

@@ -41,7 +41,7 @@ export default function ArticleCard({article}: ArticleType) {
             <div className="flex items-center" onClick={() => setIsPopupOpen(prev => !prev)}>
                <IconButton 
                   src="../assets/data tables/icons/edit.svg"
-                  alt=""
+                  label="edit article"
                   width={18}
                   height={17}
                   className="edit"

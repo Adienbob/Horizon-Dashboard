@@ -51,7 +51,7 @@ export default function CustomCalendar() {
             outside: "text-gray-400", 
             }}
             components={{
-            Caption: () => (
+            CaptionLabel: () => (
                <div className="body">
                   <select
                   value={getMonth(month)}

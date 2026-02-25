@@ -7,7 +7,7 @@ type Data = {
    input?: boolean;
    className?: string[];
 }
-export default function CheckTable({headers, data, input, className}: Data) {
+export default function CheckTable({headers, data, input}: Data) {
    const { sortedData, handleSort, setIsSorted } = useSort(data)
 
    return (

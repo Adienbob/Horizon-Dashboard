@@ -10,16 +10,14 @@ ChartOptions,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import IconButton from "../buttons/iconButton";
+import { useMemo, memo } from "react";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-export default function StackedBarChart() {
-   const labels = [
-      "17", "18", "19", "20", "21", "22", "23", "24", "25"
-   ];
+function StackedBarChart() {
 
-   const data = {
-      labels,
+   const data = useMemo(() => ({
+      labels: ["17", "18", "19", "20", "21", "22", "23", "24", "25"],
       datasets: [
       {
          label: "PRODUCT A",
@@ -38,25 +36,25 @@ export default function StackedBarChart() {
          borderRadius: { topLeft: 60, topRight: 60 },
       },
       ],
-   };
+   }), [])
 
-   const options: ChartOptions<"bar"> = {
+   const options = useMemo<ChartOptions<"bar">>(() => ({
       responsive: true,
       plugins: {
-      legend: { display: false },
-      title: { display: false },
+         legend: { display: false },
+         title: { display: false },
       },
       scales: {
-         x: { stacked: true, grid: { display: false }, border: {display: false} },
-         y: {display: false, stacked: true},
+         x: { stacked: true, grid: { display: false }, border: { display: false } },
+         y: { display: false, stacked: true },
       },
-   };
+   }), []);
 
    return (
       <section className="2xl:col-span-6">
          <div className="head">
             <h2>Weekly Revenue</h2>
-            <IconButton src="../assets/global/Buttons/bar_chart.svg" width={24} height={24} alt="more icon"  />
+            <IconButton src="../assets/global/Buttons/bar_chart.svg" width={24} height={24} label="more icon"  />
          </div>
          <div className="body">
             <Bar data={data} options={options} />
@@ -64,3 +62,5 @@ export default function StackedBarChart() {
       </section>
    );
 }
+
+export default memo(StackedBarChart)

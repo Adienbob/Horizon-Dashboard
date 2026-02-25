@@ -5,17 +5,16 @@ type IconDetails = {
    src: string;
    width: number;
    height: number;
-   alt: string;
    className?: string;
 }
 
-export default function IconButton({label, src, width, height, alt, className}: IconDetails) {
+export default function IconButton({label, src, width, height, className}: IconDetails) {
 
    return (
       <button aria-label={label} className={className}>
          <Image 
             src={src}
-            alt={alt}
+            alt=""
             width={width}
             height={height}
          />

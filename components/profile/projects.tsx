@@ -33,7 +33,7 @@ function Project({head, rank, img}: ProjectTypes) {
          </div>
             <IconButton 
                src="../assets/profile/icons/edit.svg"
-               alt=""
+               label="edit project"
                width={18}
                height={18}
             />
