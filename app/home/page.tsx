@@ -1,4 +1,5 @@
 "use client"
+import dynamic from "next/dynamic";
 
 import CheckTable from "@/components/global/checkTable";
 import ComplexTable from "@/components/global/complexTable";
@@ -6,15 +7,22 @@ import Tasks from "@/components/home/tasks";
 import Lessons from "@/components/home/lessons";
 import TeamMembers from "@/components/home/members";
 import SecurityCards from "@/components/home/security";
-import Traffic from "@/components/home/traffic";
-import StackedChart from "@/components/home/revenue";
-import TotalSpent from "@/components/home/totalSpent";
-import DashboardOverview from "../../components/home/overview";
-import PieChart from "@/components/home/pieChart";
+import DashboardOverview from "@/components/home/overview";
+import LazyLoad from "@/components/global/lazyChart";
+import StackedChart from "@/components/home/revenue"
+import TotalSpent from "@/components/home/totalSpent"
+
+const PieChart = dynamic(() => import("@/components/home/pieChart"), {
+   ssr: false,
+});
+
+const BarChart = dynamic(() => import("@/components/home/traffic"), {
+   ssr: false,
+});
 
 
 export default function Home() {
-
+   
 
    return (
       <>
@@ -35,8 +43,12 @@ export default function Home() {
             input={true}
             className={["horizon-pro", "horizon-free", "weekly-update, venus-asset", "marketplace"]}
          />
-         <Traffic />
-         <PieChart />
+         <LazyLoad>
+            <BarChart/>
+         </LazyLoad>
+         <LazyLoad>
+            <PieChart/>
+         </LazyLoad>
          <ComplexTable 
             headers={["NAME", "STATUS", "DATE", "PROGRESS"]}
             data={[

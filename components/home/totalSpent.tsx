@@ -3,71 +3,75 @@ import Image from "next/image"
 import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
 import IconButton from "../buttons/iconButton";
+const Chart = dynamic(() => import("react-apexcharts"), { 
+   ssr: false,
+   loading: () => <div className="w-full h-[300px] bg-transparent" /> 
+});
+const areaSeries: ApexAxisChartSeries = [
+   {
+      name: "Revenue",
+      data: [50, 64, 48, 66, 49, 68],
+   },
+   {
+      name: "profit",
+      data: [30, 40, 24, 46, 20, 46]
+   }
+]
 
-
-const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
-
-export default function TotalSpent() {
-
-   const areaSeries: ApexAxisChartSeries = [
-         {
-            name: "Revenue",
-            data: [50, 64, 48, 66, 49, 68],
-         },
-         {
-            name: "profit",
-            data: [30, 40, 24, 46, 20, 46]
-         }
-      ]
-      const areaOptions: ApexOptions = {
-         chart: {
-            type: "area",
-            height: 90,
-            toolbar: { show: false },
-            zoom: { enabled: false },
-            selection: { enabled: false }
-         },
-         legend: { show: false },
-         colors: ["#4318FF", "#6AD2FF" ],
-         stroke: {
-            curve: "smooth", 
-            width: 4,        
-         },
-         yaxis: {
+const areaOptions: ApexOptions = {
+   chart: {
+      type: "area",
+      height: "100%",
+      toolbar: { show: false },
+      zoom: { enabled: false },
+      selection: { enabled: false },
+      animations: {enabled: false},
+      redrawOnParentResize: false,
+      redrawOnWindowResize: false,
+   },
+   legend: { show: false },
+   colors: ["#4318FF", "#6AD2FF" ],
+   stroke: {
+      curve: "smooth", 
+      width: 4,        
+   },
+   yaxis: {
+      show: false,
+      labels: {
+         formatter: (value) => `$${value}`,
+      },
+   },
+   xaxis: {
+      categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB"],
+      axisBorder: {
+         show: false,
+      }
+   },
+   markers: {
+      size: 0, 
+      colors: ["#fff"], 
+      strokeColors: ["#4318FF", "#6AD2FF" ], 
+      strokeWidth: 2,
+      hover: {
+         size: 6, 
+      },
+   },
+   grid: {
+      yaxis: {
+         lines: {
             show: false,
-            labels: {
-               formatter: (value) => `$${value}`,
-            },
-         },
-         xaxis: {
-            categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB"],
-            axisBorder: {
-               show: false,
-            }
-         },
-         markers: {
-            size: 0, 
-            colors: ["#fff"], 
-            strokeColors: ["#4318FF", "#6AD2FF" ], 
-            strokeWidth: 2,
-            hover: {
-               size: 6, 
-            },
-         },
-         grid: {
-            yaxis: {
-               lines: {
-                  show: false,
-               }
-            }
          }
       }
+   }
+}
+export default function TotalSpent() {
+
    
    return (
       <section className="2xl:col-span-6">
          <div className="head">
-            <h2 className="sr-only">TotalSpent</h2>
-            <button className="flex items-center">
+            <h2 className="sr-only">Total Spent This Month</h2>
+            <button   aria-label="Select date range" className="flex items-center">
                <Image 
                   src={"../assets/global/Buttons/calendar_today.svg"}
                   alt="Calender Icon"
@@ -114,7 +118,7 @@ export default function TotalSpent() {
                   On track
                </p>
             </div>
-            <div className="w-full">
+            <div className="w-full h-[300px]">
                <Chart options={areaOptions} series={areaSeries}  />
             </div>
          </div>

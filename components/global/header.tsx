@@ -1,16 +1,15 @@
 "use client"
 
 import IconButton from "../buttons/iconButton";
-import { usePathname } from "next/navigation";
 import { useState } from "react"
 
-type SideBar = {
+type HeaderProps = {
    isOpen: boolean;
    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+   pathName: string;
 }
 
-export default function Header({isOpen, setIsOpen}: SideBar) {
-   const pathName = usePathname()
+export default function Header({isOpen, setIsOpen, pathName}: HeaderProps) {
    const navLinks = [
       { name: "Main Dashboard", path: "/" },
       { name: "Main Dashboard", path: "/home" },

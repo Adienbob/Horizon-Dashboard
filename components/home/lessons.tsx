@@ -42,7 +42,7 @@ export default function Lessons() {
                   </div>
                   <div className="grid gap-5 2xl:flex">
                      <Image 
-                        src={"../assets/home/lessons/avatars.svg"}
+                        src={"../assets/home/lessons/Avatars.svg"}
                         alt=""
                         width={109.5}
                         height={34}
