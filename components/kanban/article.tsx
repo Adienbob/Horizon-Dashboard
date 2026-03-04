@@ -35,7 +35,7 @@ export default function ArticleCard({article}: ArticleType) {
       }
    }, [])
    return (
-      <article className="rounded-[15px] shadow-[0_18px_40px_0_rgba(112,144,176,0.12)] p-[23px]">
+      <article className="rounded-[15px] shadow-[0_18px_40px_0_rgba(112,144,176,0.12)] dark:shadow-none dark:bg-(--lessons-btns-bg) p-[23px]">
          <div className="flex items-center justify-between mb-[21px]">
             <h3 className="leading-7">{article.head}</h3>
             <div className="flex items-center" onClick={() => setIsPopupOpen(prev => !prev)}>

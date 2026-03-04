@@ -6,7 +6,7 @@ type Info = {
 function Content({title, value}: Info) {
 
    return (
-      <div className="rounded-2xl shadow-[0_18px_40px_0_rgba(112,144,176,0.12)] px-5 pt-[23px] pb-[29px]">
+      <div className="rounded-2xl shadow-[0_18px_40px_0_rgba(112,144,176,0.12)] dark:shadow-none dark:bg-(--lessons-btns-bg) px-5 pt-[23px] pb-[29px]">
          <p className="text-(--secondary) font-medium text-sm">{title}</p>
          <span className="font-normal">{value}</span>
       </div>

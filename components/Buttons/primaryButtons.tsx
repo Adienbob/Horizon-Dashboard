@@ -10,7 +10,7 @@ type Buttons = {
 export default function PrimaryButton({text, background, black, weight, className}: Buttons) {
 
    return (
-      <button className={`${background} ${black ? "text-black" : "text-(--component-bg)"} w-full h-full font-${weight ? weight : "bold"} ${className ? className : ""}`}>
+      <button className={`${background} ${black ? "text-black" : "text-white"} w-full h-full font-${weight ? weight : "bold"} ${className ? className : ""}`}>
          {text}
       </button>
    )

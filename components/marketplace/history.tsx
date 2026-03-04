@@ -18,7 +18,7 @@ export default function History({cards}: CardsTypes) {
       <section className="History grid md:col-span-2 lg:col-span-1 lg:h-full ">
          <div className="flex justify-between">
             <h2>History</h2>
-            <button className="text-(--primary-blue) rounded-full font-normal px-5 hover:bg-(--btn-hover) bg-(--main-bg) leading-6 py-1.5">See all</button>
+            <button className="text-(--primary-blue) dark:text-white rounded-full font-normal px-5 hover:bg-(--btn-hover) bg-(--main-bg) leading-6 py-1.5">See all</button>
          </div>
          <div className="grid gap-5">
             {cards.map((cardDetails, cardIndex) => (

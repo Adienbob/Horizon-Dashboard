@@ -18,7 +18,7 @@ export default function Creators({details, avatars}: CreatorTypes) {
             <h2 className="leading-9 text-[20px]">
                Top Creators
             </h2>
-            <button className="text-(--primary-blue) rounded-full font-normal px-5 hover:bg-(--btn-hover) bg-(--main-bg) leading-6 py-1.5">See all</button>
+            <button className="text-(--primary-blue) dark:text-white rounded-full font-normal px-5 hover:bg-(--btn-hover) bg-(--main-bg) leading-6 py-1.5">See all</button>
          </div>
          <table className="">
             <thead>

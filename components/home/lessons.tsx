@@ -3,7 +3,7 @@ import PrimaryButton from "../buttons/primaryButtons";
 
 export default function Lessons() {
    return (
-      <section className="rounded-[20px] bg-white lessons text-(--primary) tracking-[-0.02rem] font-bold 2xl:col-span-4 2xl:grid" id="lessons">
+      <section className="rounded-[20px] bg-(--component-bg) lessons text-(--primary) tracking-[-0.02rem] font-bold 2xl:col-span-4 2xl:grid" id="lessons">
             <h2 className="sr-only">New Lessons</h2>
             <div className="flex items-center gap-3 px-6 pt-4">
                <Image 

@@ -1,4 +1,4 @@
-import IconButton from "../buttons/iconButton";
+import IconButton from "../buttons/moreHoriz";
 import  SwitchBtn from "../buttons/toggle";
 
 
@@ -8,7 +8,7 @@ export default function Notifications() {
       <section className="md:col-span-2 lg:col-span-6 lg:row-start-1 2xl:w-[32.5%]">
          <div className="head">
             <h2 className="text-2xl">Notifications</h2>
-            <IconButton src="../assets/global/Buttons/more_horiz.svg" width={24} height={24} label="more icon"  />
+            <IconButton />
          </div>
          <div className="grid *:flex *:gap-[15px] gap-5">
             <div className="notification">

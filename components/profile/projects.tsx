@@ -18,7 +18,7 @@ type ProjectTypes = {
 function Project({head, rank, img}: ProjectTypes) {
 
    return (
-      <article className="flex justify-between p-3.5 shadow-[0_18px_40px_0_rgba(112,144,176,0.12)] rounded-2xl">
+      <article className="flex justify-between p-3.5 shadow-[0_18px_40px_0_rgba(112,144,176,0.12)] dark:shadow-none dark:bg-(--lessons-btns-bg) rounded-2xl">
          <div className="flex items-center gap-[19px]">
             <Image 
                src={img.src}
@@ -28,7 +28,7 @@ function Project({head, rank, img}: ProjectTypes) {
             />
             <div className="">
                <span>{head}</span>
-               <p className="text-(--secondary) font-medium text-sm">Project #{rank} <span className="px-0.5">•</span>  <Link href={"#"} className="text-(--primary-blue) underline">See project details</Link></p>
+               <p className="text-(--secondary) font-medium text-sm">Project #{rank} <span className="px-0.5">•</span>  <Link href={"#"} className="text-(--primary-blue) dark:text-white underline">See project details</Link></p>
             </div>
          </div>
             <IconButton 
@@ -45,10 +45,10 @@ export default function Projects() {
 
    return (
       
-      <section className="all-projects shadow-[14px_17px_40px_4px_rgba(112,144,176,0.08)] md:col-span-2 lg:col-span-6 lg:row-end-2 2xl:w-[32.5%]">
+      <section className="all-projects md:col-span-2 lg:col-span-6 lg:row-end-2 2xl:w-[32.5%]">
          <h2 className="text-[20px]">All Projects</h2>
          <p className="text-(--secondary) font-normal leading-[26px]">Here you can find more details about your projects. Keep you user engaged by providing meaningful information.</p>
-         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
+         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1 mt-5">
             <Project 
                head="Technology behind the Blockchain"
                rank={1}

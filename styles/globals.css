@@ -41,6 +41,60 @@
    --update: #3965FF;
    --done: #01B574;
 
+   /* Progress Chart */
+   --bar: #EFF4FB;
+
+   /* icon colors */
+   --btn-color: #4318FF;
+   --icon-color: #A3AED0;
+}
+
+.dark {
+   --primary: #FFFFFF;
+   --secondary: #A3AED0;
+   --primary-blue: #7551FF;
+
+   /* Accent / Brand */
+   --color-accent-yellow: #FFCE20;
+
+   /* Background Colors */
+   --main-bg: #0B1437;
+   --component-bg: #111C44;
+   --checkbox-bg: #EFF4FB;
+   --lessons-btns-bg: #1B254B;
+   --border: #E9EDF7;
+
+   /* Neutral / Gray Scale */
+   --color-gray-900: #1B2559;
+   --color-gray-500: #707EAE;
+   --extensions: #8F9BBA;
+   --color-gray-300: #B0BBD5;
+   --toggle-off: rgba(255, 255, 255, 0.1);
+
+   /* Success / Growth */
+   --growth: #05CD99;
+
+   --watch-video: #E9E3FF;
+   --discover: #E3DAFF;
+
+   /* Danger / Error */
+   --color-danger: #EE5D50;
+   --color-danger-light: #FEEFEE;
+   --btn-hover: #edf2f7;
+
+   /* buttons background */
+   --bid: #7551FF;
+   --pending: #FFB547;
+   --error: #E31A1A;
+   --update: #3965FF;
+   --done: #01B574;
+
+   /* Progress Chart */
+   --bar: #293357;
+
+   /* Icon colors */
+   --btn-color: #ffffff;
+   --icon-color: #ffffff;
 }
 
 /* base */
@@ -64,7 +118,7 @@ button {
 }
 
 section:not(#hero, #lessons, #trendingCards, #recentlyCards, #discover, #signIn ) {
-   @apply bg-white px-5 py-4
+   @apply px-5 py-4 bg-(--component-bg)
 }
 
 section:not(#signIn) {

@@ -7,10 +7,12 @@ export default function Storage() {
 
    return (
       <section className="lg:col-span-3 2xl:w-[25%]">
-         <h2 className="sr-only">Storage</h2>
-         <MoreHorizBtn />
+         <div className="flex justify-end">
+            <h2 className="sr-only">Storage</h2>
+            <MoreHorizBtn />
+         </div>
          <div className="flex flex-col items-center mb-10">
-            <div className="border-dashed border-2 border-(--secondary) mb-3.5">
+            <div className="mb-3.5">
                <div className="bg-(--main-bg) px-[27px] py-[27px] rounded-full">
                   <Image 
                      src={"../assets/profile/icons/cloud_done.svg"}
@@ -27,9 +29,7 @@ export default function Storage() {
             <span className="used-space">25.6 Gb</span>
             <span className="total-space">50 Gb</span>
          </div>
-         <div className="h-2.5 w-full bg-(--border) rounded-[42px]">
-            <HoriChart progressPrecentage={25.6} />
-         </div>
+         <HoriChart progressPrecentage={56.1} style="w-full" />
       </section>
    )
 }

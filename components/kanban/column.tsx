@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import { useState } from "react";
 import ArticleCard from "./article";
 
@@ -41,12 +40,10 @@ export default function Columns({className, columnHeader, articles}: KanbanData)
          <div className="head">
             <h2 className="text-[32px]">{columnHeader}</h2>
             <button onClick={() => setIsAddArticleOpen(prev => !prev)}>
-               <Image 
-                  src={"../assets/data tables/icons/add_icon.svg"}
-                  alt=""
-                  width={24}
-                  height={24}
-               />
+               <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.32703 3.71619V13.2787" stroke="var(--btn-color)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M14.3896 8.49744H4.26459" stroke="var(--btn-color)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+               </svg>
             </button>
             {isAddArticleOpen ? 
                <form action="" onSubmit={handleNewArticle}>

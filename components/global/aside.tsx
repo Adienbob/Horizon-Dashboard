@@ -22,7 +22,7 @@ export default function SideBar({ isOpen, setIsOpen }: SidebarState) {
       <aside
          className={`
          fixed top-0 left-0 z-50 h-screen w-72 px-4 flex flex-col
-         bg-white
+         bg-(--component-bg)
          transform transition-transform duration-300 ease-out
          ${isOpen ? "translate-x-0" : "-translate-x-full"}
          2xl:relative
