@@ -23,6 +23,7 @@ export default function Traffic() {
          data: [20, 30, 40, 20, 45, 50, 30],
          borderRadius: { topLeft: 60, topRight: 60, bottomLeft: 0, bottomRight: 0 },
          borderWidth: 0,
+         barThickness: 20,
          maxBarThickness: 48,
          barPercentage: 0.7,
          categoryPercentage: 0.8,
@@ -53,6 +54,7 @@ export default function Traffic() {
    const barOptions: ChartOptions<"bar"> = {
       indexAxis: "x", 
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
          legend: { display: false },
          title: { display: false },
@@ -77,7 +79,7 @@ export default function Traffic() {
    };
 
    return (
-   <section className="2xl:col-span-3">
+   <section className="2xl:col-span-3 h-full">
          <h2 className="sr-only">Daily Traffic</h2>
          <div className="head">
             <p className="text-(--secondary) text-[14px] font-medium">Daily Traffic<strong className="text-(--primary) text-[34px] block">2.579 <span className="text-(--secondary) text-[14px] font-medium">visitors</span></strong></p>
@@ -95,7 +97,7 @@ export default function Traffic() {
                +2.45%
             </span>
          </div>
-         <div className="body h-50">
+         <div className="body h-[270px] w-full">
             <Bar data={data} options={barOptions} />
          </div>
       </section>

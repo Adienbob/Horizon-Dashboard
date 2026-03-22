@@ -23,23 +23,28 @@ function StackedBarChart() {
          label: "PRODUCT A",
          data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
          backgroundColor: "#6AD2FF",
+         barThickness: 20,
       },
       {
          label: "PRODUCT B",
          data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
          backgroundColor: "#4318FF",
+         barThickness: 20,
       },
       {
          label: "PRODUCT C",
          data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
          backgroundColor: "#EFF4FB",
          borderRadius: { topLeft: 60, topRight: 60 },
+         barThickness: 20,
       },
       ],
    }), [])
 
    const options = useMemo<ChartOptions<"bar">>(() => ({
       responsive: true,
+      maintainAspectRatio: false,
+
       plugins: {
          legend: { display: false },
          title: { display: false },
@@ -56,7 +61,7 @@ function StackedBarChart() {
             <h2>Weekly Revenue</h2>
             <IconButton src="../assets/global/Buttons/bar_chart.svg" width={24} height={24} label="more icon"  />
          </div>
-         <div className="body">
+         <div className="sm:h-[350px] lg:h-[375px]">
             <Bar data={data} options={options} />
          </div>
       </section>

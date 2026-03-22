@@ -118,8 +118,10 @@ export default function TotalSpent() {
                   On track
                </p>
             </div>
-            <div className="w-full h-[300px]">
-               <Chart options={areaOptions} series={areaSeries}  />
+            <div className="overflow-x-auto">
+               <div className="w-full sm:h-fit lg:h-[300px]">
+                  <Chart options={areaOptions} series={areaSeries}  />
+               </div>
             </div>
          </div>
       </section>
