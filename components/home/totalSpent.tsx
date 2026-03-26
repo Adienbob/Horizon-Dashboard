@@ -2,7 +2,7 @@
 import Image from "next/image"
 import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
-import IconButton from "../buttons/iconButton";
+import IconButton from "../buttons/IconButton";
 const Chart = dynamic(() => import("react-apexcharts"), { 
    ssr: false,
    loading: () => <div className="w-full h-[300px] bg-transparent" /> 

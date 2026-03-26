@@ -1,8 +1,8 @@
 "use client"
 
-import IconButton from "../buttons/iconButton";
 import { useState } from "react"
 import { useTheme } from "./themeContext";
+import Image from "next/image"
 
 type HeaderProps = {
    isOpen: boolean;
@@ -105,7 +105,7 @@ export default function Header({isOpen, setIsOpen, pathName}: HeaderProps) {
                      </button>
                   </li>
                   <li className="flex">
-                     <IconButton label="profile picture" src="../assets/global/Buttons/avatar.svg" width={41} height={41} />
+                     <Image alt="profile picture" src="../assets/global/Buttons/avatar.svg" width={41} height={41} />
                   </li>
                </ul>
             </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link"
-import IconButton from "../buttons/iconButton";
+import IconButton from "../buttons/IconButton";
 
 type ImageTypes = {
    src: string;
