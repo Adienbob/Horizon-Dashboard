@@ -1,6 +1,6 @@
 import Image from "next/image";
 import useSort from "../hooks/useSort";
-import HoriChart from "../global/horizontalChart";
+import HoriChart from "../global/HorizChart";
 
 
 type CreatorTypes = {

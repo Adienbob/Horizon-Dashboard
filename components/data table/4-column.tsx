@@ -1,4 +1,4 @@
-import MoreButton from "../buttons/moreHoriz";
+import MoreButton from "../buttons/MoreHoriz";
 import useSort from "../hooks/useSort";
 
 type PropsData = {

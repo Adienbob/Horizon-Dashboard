@@ -1,6 +1,6 @@
 import Image from "next/image"
-import MoreHorizBtn from "../buttons/moreHoriz";
-import HoriChart from "../global/horizontalChart";
+import MoreHorizBtn from "../buttons/MoreHoriz";
+import HoriChart from "../global/HorizChart";
 
 
 export default function Storage() {

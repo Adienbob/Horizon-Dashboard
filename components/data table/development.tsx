@@ -1,6 +1,6 @@
-import MoreButton from "../buttons/moreHoriz";
+import MoreButton from "../buttons/MoreHoriz";
 import Image from "next/image"
-import HoriChart from "../global/horizontalChart";
+import HoriChart from "../global/HorizChart";
 import { useState} from "react";
 type PropsTypes = {
    headers: string[],
