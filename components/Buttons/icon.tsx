@@ -8,7 +8,7 @@ type IconDetails = {
    className?: string;
 }
 
-export default function IconButton({label, src, width, height, className}: IconDetails) {
+export default function IconBtn({label, src, width, height, className}: IconDetails) {
 
    return (
       <button aria-label={label} className={className}>

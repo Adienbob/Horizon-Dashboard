@@ -1,4 +1,4 @@
-import IconButton from "../buttons/IconButton";
+import IconButton from "../buttons/icon";
 import Image from "next/image";
 import PrimaryButton from "../buttons/primaryButtons";
 import { useState, useEffect, useRef } from "react";
