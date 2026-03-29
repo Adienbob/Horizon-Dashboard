@@ -1,6 +1,6 @@
 import Image from "next/image";
-import MoreVertBtn from "../buttons/moreVert";
-import IconButton from "../buttons/iconButton";
+import MoreVertBtn from "../btns/moreVert";
+import IconButton from "../btns/icon";
 
 
 type Details = {

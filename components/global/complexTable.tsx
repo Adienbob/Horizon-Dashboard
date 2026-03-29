@@ -1,7 +1,7 @@
 import Image from "next/image"
 import useSort from "../hooks/useSort";
-import MoreButton from "../buttons/moreHoriz";
-import HoriChart from "./horizontalChart";
+import MoreButton from "../btns/more";
+import HoriChart from "./HorizChart";
 
 
 type Data = {

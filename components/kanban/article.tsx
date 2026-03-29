@@ -1,6 +1,6 @@
-import IconButton from "../buttons/iconButton";
+import IconButton from "../btns/icon";
 import Image from "next/image";
-import PrimaryButton from "../buttons/primaryButtons";
+import PrimaryButton from "../btns/primaryButtons";
 import { useState, useEffect, useRef } from "react";
 
 type dataTypes = {

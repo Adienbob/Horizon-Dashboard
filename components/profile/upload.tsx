@@ -1,4 +1,4 @@
-import PrimaryButton from "../buttons/primaryButtons";
+import PrimaryButton from "../btns/primaryButtons";
 
 
 export default function UploadFiles() {

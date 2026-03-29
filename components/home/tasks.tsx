@@ -1,6 +1,6 @@
 import Image from "next/image"
 import React from "react";
-import MoreButton from "../buttons/moreHoriz";
+import MoreButton from "../btns/more";
 
 
 type Taskstypes = {

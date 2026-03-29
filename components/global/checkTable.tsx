@@ -1,4 +1,4 @@
-import MoreButton from "../buttons/moreHoriz";
+import MoreButton from "../btns/more";
 import useSort from "../hooks/useSort";
 
 type Data = {
