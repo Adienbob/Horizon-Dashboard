@@ -1,5 +1,5 @@
 import Image from "next/image"
-import MoreHorizBtn from "../buttons/more";
+import MoreHorizBtn from "../btns/more";
 import HoriChart from "../global/HorizChart";
 
 

@@ -1,5 +1,5 @@
-import IconButton from "../buttons/more";
-import  SwitchBtn from "../buttons/toggle";
+import IconButton from "../btns/more";
+import  SwitchBtn from "../btns/toggle";
 
 
 export default function Notifications() {
