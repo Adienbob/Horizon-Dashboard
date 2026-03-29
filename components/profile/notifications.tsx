@@ -1,4 +1,4 @@
-import IconButton from "../buttons/MoreHoriz";
+import IconButton from "../buttons/more";
 import  SwitchBtn from "../buttons/toggle";
 
 

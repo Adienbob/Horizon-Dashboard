@@ -1,6 +1,6 @@
 import Image from "next/image"
 import useSort from "../hooks/useSort";
-import MoreButton from "../buttons/MoreHoriz";
+import MoreButton from "../buttons/more";
 import HoriChart from "./HorizChart";
 
 

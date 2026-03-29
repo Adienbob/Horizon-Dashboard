@@ -1,4 +1,4 @@
-import MoreButton from "../buttons/MoreHoriz";
+import MoreButton from "../buttons/more";
 import Image from "next/image"
 import HoriChart from "../global/HorizChart";
 import { useState} from "react";
