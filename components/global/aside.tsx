@@ -8,7 +8,7 @@ type SidebarState = {
 
 const links = [
    { name: "Dashboard", href: "/" },
-   { name: "NFT Markets", href: "/marketplace" },
+   { name: "NFT Markets", href: "/market" },
    { name: "Tables", href: "/tables" },
    { name: "Kanban", href: "/kanban" },
    { name: "Profile", href: "/profile" },
